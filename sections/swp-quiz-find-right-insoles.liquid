@@ -1,1 +1,67 @@
-<h2>Quiz</h2>
+{% liquid 
+    assign background = section.settings.background
+    assign first = section.settings.first
+    assign second = section.settings.second
+    assign description = section.settings.description
+    assign button = section.settings.button
+    assign url = section.settings.button_url
+    assign logo = section.settings.logo
+ %}
+
+<div class="mb-60">
+    <div class="relative h-[500px] mm:h-[570px] ds:h-[600px]">
+        <div class="ds:mx-9 dm:max-w-screen-dm dm:mx-auto dm:px-10 dl:px-0">
+            <div class="flex flex-col absolute z-10 w-full mt-20">
+                <div class="font-bold text-[125px] w-7/12 mb-3">
+                    <div class="text-[#272727] tracking-tighter leading-none">{{ first }}</div>
+                    <div class="text-[#E68A3F] tracking-tighter leading-none">{{ second }}</div>
+                </div>
+                <div class="text-[24px] text-[#4E4E4E] w-1/2 mb-9">{{ description }}</div>
+                <div class="flex items-center gap-4 divide-x-2 divide-[#D8D8D8]">
+                    <a href="{{ url }}" title="{{ url.title }}" class="font-bold text-[20px] text-white bg-[#E68A3F] rounded-2xl px-10 py-4">{{ button }}</a>
+                    <img class="pl-4" src="{{ logo | image_url }}" alt="{{ logo.alt }}" title="{{ logo.title }}" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <img class="absolute right-0 object-cover w-7/12 h-full" src="{{ background | image_url }}" alt="{{ background.alt }}" title="{{ background.title }}" loading="lazy">
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Image With Text Quizz",
+    "settings": [
+        {
+            "type": "text",
+            "id": "first",
+            "label": "Headline"
+        },
+        {
+            "type": "text",
+            "id": "description",
+            "label": "Subheadline"
+        },
+        {
+            "type": "text",
+            "id": "button",
+            "label": "Link Text"
+        },
+        {
+            "type": "url",
+            "id": "button_url",
+            "label": "Link URL"
+        },
+        {
+            "type": "image_picker",
+            "id": "background",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image With Text Quizz"
+        }
+    ]
+}
+{% endschema %}
