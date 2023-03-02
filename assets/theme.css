@@ -616,6 +616,10 @@ video {
   top: 0px;
 }
 
+.right-14 {
+  right: 3.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -681,6 +685,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -716,6 +724,10 @@ video {
 
 .h-\[404px\] {
   height: 404px;
+}
+
+.h-\[450px\] {
+  height: 450px;
 }
 
 .w-3\/5 {
@@ -895,6 +907,14 @@ video {
 
 .text-\[50px\] {
   font-size: 50px;
+}
+
+.text-\[17px\] {
+  font-size: 17px;
+}
+
+.text-\[35px\] {
+  font-size: 35px;
 }
 
 .font-bold {

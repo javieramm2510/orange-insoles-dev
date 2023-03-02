@@ -14,19 +14,17 @@
                         <p class="text-[18px] text-white mb-5">{{ description }}</p>
                         <a href="{{ url }}" title="{{ title }}" class="font-medium text-[22px] text-white">Buy Now →</a>
                     </div>
-                    <a href="{{ url }}"><img class="absolute right-12 object-cover rounded-3xl w-4/6 h-[404px]" src="{{ image | image_url }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
+                    <a href="{{ url }}"><img class="absolute right-14 object-cover rounded-3xl w-4/6 h-[450px]" src="{{ image | image_url }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
                 </div>             
             {% elsif forloop.index >= 2 %}
-                <div class="col-span-2 relative group bg-black rounded-2xl">
-                    <a href="{{ url }}" title="{{ title }}"><h2 class="absolute top-4 left-4 font-extrabold text-3xl text-white text-shadow pr-4 mm:text-4xl ds:top-6 ds:left-6 ds:group-hover:text-[40px]">{{ title }}</h2></a>
-                    <a href="{{ url }}" title="{{ title }}" class="button-blur absolute bottom-4 right-4 shadow-sp ds:bottom-6 ds:right-6">VIEW ALL</a>
-                    <a href="{{ url }}"><picture>
-                        <source media="(min-width: 868px)" srcset="{{ image | image_url: width: 630 }}">
-                        <source media="(min-width: 768px)" srcset="{{ image | image_url: width: 830 }}">
-                        <source media="(min-width: 480px)" srcset="{{ image | image_url: width: 730 }}">
-                        <img class="object-cover rounded-cl w-full h-full" src="{{ image | image_url: width: 440 }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy">                        
-                    </picture></a>
-                </div>
+                <div class="col-span-2 relative bg-black rounded-3xl px-10 py-12">
+                    <div class="absolute z-10 w-1/2">
+                        <a href="{{ url }}" title="{{ title }}"><h2 class="font-bold text-[35px] text-white">{{ title }}</h2></a>
+                        <p class="text-[17px] text-white mb-6">{{ description }}</p>
+                        <a href="{{ url }}" title="{{ title }}" class="font-medium text-[22px] text-[#E68A3F]">Buy Now →</a>
+                    </div>
+                    <a href="{{ url }}"><img class="absolute right-0 top-0 object-cover rounded-3xl w-1/2 h-full" src="{{ image | image_url }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
+                </div>   
             {% endif %}
         {% endfor %}
     </div>
