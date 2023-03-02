@@ -9,8 +9,8 @@
  %}
 
 <div class="mb-10 mx-5">
-    <div class="relative h-[500px] mm:h-[570px] ds:h-[600px] ds:mx-9 dm:max-w-screen-dm dm:mx-auto dm:px-10 dl:px-0">
-        <div class="flex flex-col justify-between items-center gap-2 absolute inset-3 text-center text-text backdrop-blur-[6px] bg-body/50 rounded-cl p-4 mm:inset-y-4 mm:left-4 mm:right-auto mm:p-5 ds:inset-y-8 ds:left-8 ds:right-auto">
+    <div class="relative h-[500px] mm:h-[570px] ds:h-[600px]">
+        <div class="flex flex-col justify-between items-center gap-2 absolute inset-3 text-center text-text backdrop-blur-[6px] bg-body/50 rounded-cl p-4 mm:inset-y-4 mm:left-4 mm:right-auto mm:p-5 ds:inset-y-8 ds:left-8 ds:right-auto ds:mx-9 dm:max-w-screen-dm dm:mx-auto dm:px-10 dl:px-0">
             <a href="{{ url }}" title="{{ title }}" class="self-center w-3/5"><img src="{{ logo | image_url: width: 500 }}" alt="{{ logo.alt }}" loading="lazy"></a>
             {% for block in section.blocks %}
                 {% liquid 
@@ -27,12 +27,7 @@
             {% endfor %}
             <a href="{{ url }}" title="{{ title }}" class="offer-banner-btn button-custom self-center" style="background-color:{{ btn_color }}; color:{{ label_color }};">{{ button }}</a>
         </div>
-        <a href="{{ url }}"><picture>
-            <source media="(min-width: 1024px)" srcset="{{ banner | image_url }}">
-            <source media="(min-width: 768px)" srcset="{{ banner | image_url }}">
-            <source media="(min-width: 480px)" srcset="{{ banner | image_url }}">
-            <img class="object-cover rounded-cl w-full h-full" src="{{ banner | image_url }}" alt="{{ banner.alt }}" title="{{ title }}" loading="lazy">
-        </picture></a>
+        <img class="absolute left-0 object-cover w-7/12 h-full" src="{{ banner | image_url: '1000x' }}" alt="{{ banner.alt }}" title="{{ title }}" loading="lazy">
     </div>
 </div>
 

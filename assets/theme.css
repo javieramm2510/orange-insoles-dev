@@ -584,6 +584,10 @@ video {
   left: 0.75rem;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -631,6 +635,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
 }
 
 .transform {
