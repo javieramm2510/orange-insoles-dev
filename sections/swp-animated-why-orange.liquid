@@ -15,7 +15,7 @@
         <div class="text-[24px] text-[#4E4E4E] max-w-[480px] mb-8">{{ sub }}</div>
         <a href="{{ url }}" title="{{ url.title }}" class="font-bold text-[22px] text-[#E68A3F]">{{ button }} →</a>
     </div>
-    <video class="rounded-cl w-full" autoplay>
+    <video class="rounded-cl w-full" alt="{{ video.alt }}" autoplay>
         <source src="{{ video }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -64,13 +64,9 @@
             "label": "Link URL"
         },
         {
-            "type": "video_url",
+            "type": "video",
             "id": "video",
-            "label": "Video URL",
-            "accept": [
-                "youtube",
-                "vimeo"
-            ]
+            "label": "Video"
         }
     ],
     "presets": [
