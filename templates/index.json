@@ -45,11 +45,11 @@
     "a3748ab0-1fe3-4bb9-8bed-f87c54ac9c1d": {
       "type": "swp-quiz-find-right-insoles",
       "settings": {
-        "first": "Find the right insoles.",
-        "description": "Take the insole finder quiz to discover which insoles are best for you.",
+        "headline": "Find the right insoles",
+        "sub": "Take the insole finder quiz to discover which insoles are best for you.",
         "button": "Insole Quiz",
         "button_url": "",
-        "background": "shopify:\/\/shop_images\/Group_122.png"
+        "image": "shopify:\/\/shop_images\/Group_122.png"
       }
     },
     "image_banner": {
