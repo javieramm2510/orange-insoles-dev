@@ -17,7 +17,7 @@
                     <a href="{{ url }}"><img class="abolute right-0 -z-10 object-cover rounded-2xl w-4/6 h-full" src="{{ image | image_url: width: 440 }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
                 </div>             
             {% elsif forloop.index >= 2 %}
-                <div class="relative group bg-black rounded-2xl">
+                <div class="col-span-2 relative group bg-black rounded-2xl">
                     <a href="{{ url }}" title="{{ title }}"><h2 class="absolute top-4 left-4 font-extrabold text-3xl text-white text-shadow pr-4 mm:text-4xl ds:top-6 ds:left-6 ds:group-hover:text-[40px]">{{ title }}</h2></a>
                     <a href="{{ url }}" title="{{ title }}" class="button-blur absolute bottom-4 right-4 shadow-sp ds:bottom-6 ds:right-6">VIEW ALL</a>
                     <a href="{{ url }}"><picture>
