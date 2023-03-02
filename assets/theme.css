@@ -620,6 +620,10 @@ video {
   right: 3.5rem;
 }
 
+.-right-5 {
+  right: -1.25rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -756,6 +760,10 @@ video {
 
 .w-8\/12 {
   width: 66.666667%;
+}
+
+.w-2\/5 {
+  width: 40%;
 }
 
 .transform {
@@ -923,6 +931,10 @@ video {
 
 .text-\[35px\] {
   font-size: 35px;
+}
+
+.text-\[60px\] {
+  font-size: 60px;
 }
 
 .font-bold {
