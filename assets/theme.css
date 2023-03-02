@@ -608,6 +608,14 @@ video {
   top: 1rem;
 }
 
+.right-12 {
+  right: 3rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -699,6 +707,11 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .w-3\/5 {
