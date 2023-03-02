@@ -714,6 +714,10 @@ video {
   height: fit-content;
 }
 
+.h-\[404px\] {
+  height: 404px;
+}
+
 .w-3\/5 {
   width: 60%;
 }
@@ -797,6 +801,10 @@ video {
 
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .bg-\[\#E68A3F\] {
