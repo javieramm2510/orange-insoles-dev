@@ -1,1 +1,162 @@
 <h1>This is the home page hero</h1>
+{% liquid 
+    assign banner = section.settings.banner
+    assign logo = section.settings.logo
+    assign button = section.settings.button
+    assign url = section.settings.button_link
+    assign label_color = section.settings.label_color
+    assign btn_color = section.settings.btn_color
+ %}
+
+<div class="mb-10 mx-5 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 dl:px-0">
+    <div class="relative h-[500px] mm:h-[570px] ds:h-[600px]">
+        <div class="flex flex-col justify-between items-center gap-2 absolute inset-3 text-center text-text backdrop-blur-[6px] bg-body/50 rounded-cl p-4 mm:inset-y-4 mm:left-4 mm:right-auto mm:p-5 ds:inset-y-8 ds:left-8 ds:right-auto">
+            <a href="{{ url }}" title="{{ title }}" class="self-center w-3/5"><img src="{{ logo | image_url: width: 500 }}" alt="{{ logo.alt }}" loading="lazy"></a>
+            {% for block in section.blocks %}
+                {% liquid 
+                    assign text = block.settings.text
+                    assign add_logo = block.settings.add_logo
+                    assign font_size = block.settings.font_size
+                    assign font_weight = block.settings.font_weight
+                    assign text_color = block.settings.text_color
+                %}
+                <div style="font-size:{{ font_size }}px; font-weight:{{ font_weight }}; color:{{ text_color }};">{{ text }}</div>
+                {% if add_logo != blank %}
+                    <img src="{{ add_logo | image_url: width: 500 }}" alt="{{ add_logo.alt }}" class="self-center w-3/5" loading="lazy">
+                {% endif %}
+            {% endfor %}
+            <a href="{{ url }}" title="{{ title }}" class="offer-banner-btn button-custom self-center" style="background-color:{{ btn_color }}; color:{{ label_color }};">{{ button }}</a>
+        </div>
+        <a href="{{ url }}"><picture>
+            <source media="(min-width: 1024px)" srcset="{{ banner | image_url: width: 1120 }}">
+            <source media="(min-width: 768px)" srcset="{{ banner | image_url: width: 985 }}">
+            <source media="(min-width: 480px)" srcset="{{ banner | image_url: width: 730 }}">
+            <img class="object-cover rounded-cl w-full h-full" src="{{ banner | image_url: width: 450 }}" alt="{{ banner.alt }}" title="{{ title }}" loading="lazy">
+        </picture></a>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Offer banner",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "banner",
+            "label": "Banner"
+        },
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+        },
+        {
+            "type": "text",
+            "id": "button",
+            "label": "Button"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+        },
+        {
+            "type": "color",
+            "id": "label_color",
+            "label": "Label color",
+            "default": "#231f20"
+        },
+        {
+            "type": "color",
+            "id": "btn_color",
+            "label": "Button background color",
+            "default": "#ffffff"
+        }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+        {
+            "name": "Text",
+            "type": "text",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Text"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "add_logo",
+                    "label": "Additional logo"
+                },
+                {
+                    "type": "range",
+                    "id": "font_size",
+                    "min": 12,
+                    "max": 128,
+                    "step": 2,
+                    "unit": "px",
+                    "label": "Font size",
+                    "default": 16
+                },
+                {
+                    "type": "select",
+                    "id": "font_weight",
+                    "label": "Font Weight",
+                    "options": [
+                        {
+                            "value": "100",
+                            "label": "Thin"
+                        },
+                        {
+                            "value": "200",
+                            "label": "Extralight"
+                        },
+                        {
+                            "value": "300",
+                            "label": "Light"
+                        },
+                        {
+                            "value": "400",
+                            "label": "Normal"
+                        },
+                        {
+                            "value": "500",
+                            "label": "Medium"
+                        },
+                        {
+                            "value": "600",
+                            "label": "Semibold"
+                        },
+                        {
+                            "value": "700",
+                            "label": "Bold"
+                        },
+                        {
+                            "value": "800",
+                            "label": "Extrabold"
+                        },
+                        {
+                            "value": "900",
+                            "label": "Black"
+                        }
+                    ],
+                    "default": "400"
+                },
+                {
+                    "type": "color",
+                    "id": "text_color",
+                    "label": "Text color",
+                    "default": "#231F20"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Offer banner"
+        }
+    ]
+}
+{% endschema %}

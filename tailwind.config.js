@@ -12,6 +12,16 @@ module.exports = {
     './templates/customers/*.json',
   ],
   theme: {
+    screens: {
+      'ms': '320px',
+      'mm': '480px',
+      'ml': '568px',
+      'ts': '768px',
+      'tl': '868px',
+      'ds': '1024px',
+      'dm': '1200px',
+      'dl': '1440px',
+    },
     extend: {},
   },
   plugins: [],
