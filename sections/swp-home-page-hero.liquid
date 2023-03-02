@@ -27,7 +27,7 @@
             {% endfor %}
             <a href="{{ url }}" title="{{ title }}" class="offer-banner-btn button-custom self-center" style="background-color:{{ btn_color }}; color:{{ label_color }};">{{ button }}</a>
         </div>
-        <img class="absolute left-0 object-cover w-7/12 h-full" src="{{ banner | image_url: '1000x' }}" alt="{{ banner.alt }}" title="{{ title }}" loading="lazy">
+        <img class="absolute right-0 object-cover w-7/12 h-full" src="{{ banner | image_url }}" alt="{{ banner.alt }}" title="{{ title }}" loading="lazy">
     </div>
 </div>
 
