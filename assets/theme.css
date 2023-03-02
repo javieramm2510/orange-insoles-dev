@@ -716,6 +716,11 @@ video {
   font-size: 125px;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -752,6 +757,11 @@ video {
 .text-\[\#E68A3F\] {
   --tw-text-opacity: 1;
   color: rgb(230 138 63 / var(--tw-text-opacity));
+}
+
+.text-\[\#4E4E4E\] {
+  --tw-text-opacity: 1;
+  color: rgb(78 78 78 / var(--tw-text-opacity));
 }
 
 .outline {
