@@ -8,13 +8,13 @@
                 assign url = block.settings.product.url
             %}
             {% if forloop.index == 1 %}
-                <div class="row-span-2 col-span-3 relative bg-black rounded-2xl px-9 py-10">
+                <div class="row-span-2 col-span-3 relative bg-black rounded-2xl px-10 py-12">
                     <div class="absolute z-10 w-1/2">
                         <a href="{{ url }}" title="{{ title }}"><h2 class="font-bold text-[50px] text-white">{{ title }}</h2></a>
                         <p class="text-[18px] text-white mb-5">{{ description }}</p>
                         <a href="{{ url }}" title="{{ title }}" class="font-medium text-[22px] text-white">Buy Now →</a>
                     </div>
-                    <a href="{{ url }}"><img class="object-cover rounded-2xl w-4/6 h-full" src="{{ image | image_url }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
+                    <a href="{{ url }}"><img class="flex justify-end object-cover rounded-2xl w-4/6 h-full" src="{{ image | image_url }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
                 </div>             
             {% elsif forloop.index >= 2 %}
                 <div class="col-span-2 relative group bg-black rounded-2xl">
