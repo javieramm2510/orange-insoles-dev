@@ -1,194 +1,61 @@
-{{ 'collage.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<div class="color-{{ section.settings.color_scheme }} gradient isolate">
-  <div class="page-width{% if section.settings.heading == blank %} no-heading{% endif %} section-{{ section.id }}-padding">
-    <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
-    <div class="grid">
-      <div class="grid--2-col">
-        <div class="grid__item">
-          <img src="https://cdn.shopify.com/s/files/1/1288/8431/files/Group_119.png?v=1677537638" width="500">
-        </div>
-        <div class="grid__item">
-          <div class="supporting_image">
-            <img src="https://cdn.shopify.com/s/files/1/1288/8431/files/Group_119.png?v=1677537638" height="250">
-          </div>
-          <div class="supporting_image">
-            <img src="https://cdn.shopify.com/s/files/1/1288/8431/files/Group_119.png?v=1677537638" height="250">
-          </div>
-        </div>
-      </div>
+<div class="mb-10 mx-5 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 dl:px-0">
+    <div class="grid grid-rows-2 grid-cols-5 gap-4 h-[500px]">
+        {% for block in section.blocks %}
+            {% liquid  
+                assign image = block.settings.product.featured_image
+                assign title = block.settings.product.title
+                assign description = block.settings.product.description
+                assign url = block.settings.product.url
+            %}
+            {% if forloop.index == 1 %}
+                <div class="row-span-2 col-span-3 relative bg-black rounded-2xl px-9 py-10">
+                    <div class="w-1/2">
+                        <a href="{{ url }}" title="{{ title }}"><h2 class="font-bold text-[50px] text-white">{{ title }}</h2></a>
+                        <p class="text-[18px] text-white mb-4">{{ description }}</p>
+                        <a href="{{ url }}" title="{{ title }}" class="font-medium text-[22px] text-white">Buy Now →</a>
+                    </div>
+                    <a href="{{ url }}"><img class="abolute right-0 -z-10 object-cover rounded-2xl w-4/6 h-full" src="{{ image | image_url: width: 440 }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
+                </div>             
+            {% elsif forloop.index >= 2 %}
+                <div class="relative group bg-black rounded-2xl">
+                    <a href="{{ url }}" title="{{ title }}"><h2 class="absolute top-4 left-4 font-extrabold text-3xl text-white text-shadow pr-4 mm:text-4xl ds:top-6 ds:left-6 ds:group-hover:text-[40px]">{{ title }}</h2></a>
+                    <a href="{{ url }}" title="{{ title }}" class="button-blur absolute bottom-4 right-4 shadow-sp ds:bottom-6 ds:right-6">VIEW ALL</a>
+                    <a href="{{ url }}"><picture>
+                        <source media="(min-width: 868px)" srcset="{{ image | image_url: width: 630 }}">
+                        <source media="(min-width: 768px)" srcset="{{ image | image_url: width: 830 }}">
+                        <source media="(min-width: 480px)" srcset="{{ image | image_url: width: 730 }}">
+                        <img class="object-cover rounded-cl w-full h-full" src="{{ image | image_url: width: 440 }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy">                        
+                    </picture></a>
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
-  </div>
 </div>
 
 
 {% schema %}
-  {
-    "name": "Product Selector Grid",
-    "tag": "section",
-    "class": "section",
-    "disabled_on": {
-      "groups": ["header", "footer"]
-    },
+{
+    "name": "Product Selector",
     "settings": [
-      {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_top",
-        "default": 36
-      },
-      {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_bottom",
-        "default": 36
-      },
-      {
-        "type": "select",
-        "id": "color_scheme",
-        "options": [
-          {
-            "value": "accent-1",
-            "label": "t:sections.all.colors.accent_1.label"
-          },
-          {
-            "value": "accent-2",
-            "label": "t:sections.all.colors.accent_2.label"
-          },
-          {
-            "value": "background-1",
-            "label": "t:sections.all.colors.background_1.label"
-          },
-          {
-            "value": "background-2",
-            "label": "t:sections.all.colors.background_2.label"
-          },
-          {
-            "value": "inverse",
-            "label": "t:sections.all.colors.inverse.label"
-          }
-        ],
-        "default": "background-1",
-        "label": "t:sections.all.colors.label",
-        "info": "t:sections.all.colors.has_cards_info"
-      },
-      {
-        "type": "inline_richtext",
-        "id": "heading",
-        "label": "t.sections.collage.settings.heading.label"
-      },
-      {
-        "type": "select",
-        "id": "heading_size",
-        "options": [
-          {
-            "value": "h2",
-            "label": "t:sections.all.heading_size.options__1.label"
-          },
-          {
-            "value": "h1",
-            "label": "t:sections.all.heading_size.options__2.label"
-          },
-          {
-            "value": "h0",
-            "label": "t:sections.all.heading_size.options__3.label"
-          }
-        ],
-        "default": "h1",
-        "label": "t:sections.all.heading_size.label"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "featured_image",
-        "name": "t:sections.collage.blocks.image.name",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "featured_image",
-            "label": "t:sections.collage.blocks.image.settings.image.label"
-          },
-          {
-            "type": "url",
-            "id": "url",
-            "label": "Where to Link"
-          }
-        ]
-      },
-      {
-        "type": "top_image",
-        "name": "Top Image",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "top_image",
-            "label": "Top Image"
-          },
-          {
-            "type": "url",
-            "id": "top_image_link",
-            "label": "Top Image Link"
-          }
-        ]
-      },
-      {
-        "type": "bottom_image",
-        "name": "Bottom Image",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "bottom_image",
-            "label": "Bottom Image"
-          },
-          {
-            "type": "url",
-            "id": "bottom_image_link",
-            "label": "Bottom Image Link"
-          }
-        ]
-      }
     ],
     "max_blocks": 3,
+    "blocks": [
+        {
+            "name": "Product",
+            "type": "product",
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "Product"
+                }
+            ]
+        }
+    ],
     "presets": [
-      {
-        "name": "Orange Product Selector",
-        "blocks": [
-          {
-            "type": "featured_image"
-          },
-          {
-            "type": "top_image"
-          },
-          {
-            "type": "bottom_image"
-          }
-        ]
-      }
+        {
+            "name": "Product Selector"
+        }
     ]
-  }
+}
 {% endschema %}
