@@ -10,12 +10,12 @@
 
 <div class="mb-60">
     <div class="relative h-[500px] mm:h-[570px] ds:h-[600px]">
-        <div class="flex flex-col gap-2 absolute ds:mx-9 dm:max-w-screen-dm dm:mx-auto dm:px-10 dl:px-0">
-            <div class="font-bold text-[125px]">
-                <h2 class="text-[#272727]">Feel Better.</h2>
-                <h2 class="text-[#E68A3F]">Do More!</h2>
+        <div class="flex flex-col gap-2 absolute w-1/2 ds:mx-9 dm:max-w-screen-dm dm:mx-auto dm:px-10 dl:px-0">
+            <div class="font-bold text-[125px] tracking-tight">
+                <span class="text-[#272727]">Feel better.</span>
+                <span class="text-[#E68A3F]">Do more!</span>
             </div>
-            <a href="{{ url }}" title="{{ title }}" class="offer-banner-btn button-custom self-center" style="background-color:{{ btn_color }}; color:{{ label_color }};">{{ button }}</a>
+            <a href="{{ url }}" title="{{ title }}" class="self-center">{{ button }}</a>
         </div>
         <img class="absolute right-0 object-cover w-7/12 h-full" src="{{ background | image_url }}" alt="{{ background.alt }}" title="{{ background.title }}" loading="lazy">
     </div>
