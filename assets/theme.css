@@ -621,6 +621,10 @@ video {
   margin-bottom: 2.25rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
