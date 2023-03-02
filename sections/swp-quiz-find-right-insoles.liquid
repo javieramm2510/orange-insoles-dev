@@ -12,7 +12,7 @@
             <div class="flex flex-col absolute z-10 w-full mt-20">
                 <div class="font-bold text-[60px] text-[#272727] tracking-tighter leading-none w-2/5 mb-4">{{ headline }}</div>
                 <div class="text-[24px] text-[#4E4E4E] w-2/5 mb-6">{{ description }}</div>
-                <a href="{{ url }}" title="{{ url.title }}" class="font-bold text-[20px] text-white bg-[#E68A3F] rounded-2xl px-10 py-4">{{ button }}</a>
+                <a href="{{ url }}" title="{{ url.title }}" class="font-bold text-[20px] text-white bg-[#E68A3F] rounded-2xl max-w-min px-10 py-4">{{ button }}</a>
             </div>
         </div>
         <img class="absolute -right-5 object-cover w-8/12 h-full" src="{{ background | image_url }}" alt="{{ background.alt }}" title="{{ background.title }}" loading="lazy">
