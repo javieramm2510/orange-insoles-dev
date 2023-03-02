@@ -1,1 +1,85 @@
-<h2>Animated Why Orange</h2>
+{% liquid 
+    assign headline1 = section.settings.headline1
+    assign h1_color = section.settings.h1_color
+    assign headline2 = section.settings.headline2
+    assign h2_color = section.settings.h2_color
+    assign sub = section.settings.sub
+    assign button = section.settings.button
+    assign url = section.settings.button_url
+    assign video = section.settings.video
+%}
+
+<div class="mx-5 mb-10 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 dl:px-0">
+    <div class="flex justify-center text-center">
+        <h2 class="font-bold text-[60px] mb-4"><span style="color:{{ h1_color }};">{{ headline1 }}</span> <span style="color:{{ h2_color }};">{{ headline2 }}</span></h2>
+        <div class="text-[24px] text-[#4E4E4E] mb-8">{{ sub }}</div>
+        <a href="{{ url }}" title="{{ url.title }}" class="font-bold text-[22px] text-[#E68A3F]">{{ button }} →</a>
+    </div>
+    {% if url != blank %}
+        <a href="{{ url }}"><picture>
+            <source media="(min-width: 768px)" srcset="{{ imageDesk | image_url }}">
+            <img class="rounded-cl w-full" src="{{ imageMob | image_url }}" alt="{{ imageMob.alt }}" loading="lazy">
+        </picture></a>
+    {% else %}
+        <picture>
+            <source media="(min-width: 768px)" srcset="{{ imageDesk | image_url }}">
+            <img class="rounded-cl w-full" src="{{ imageMob | image_url }}" alt="{{ imageMob.alt }}" loading="lazy">
+        </picture>
+    {% endif %}
+</div>
+
+
+{% schema %}
+{
+    "name": "Why Orange Animation",
+    "settings": [
+        {
+            "type": "text",
+            "id": "headline1",
+            "label": "Headline 1 Text"
+        },
+        {
+            "type": "color",
+            "id": "h1_color",
+            "label": "Headline 1 Color",
+            "default": "#272727"
+        },
+        {
+            "type": "text",
+            "id": "headline2",
+            "label": "Headline 2 Text"
+        },
+        {
+            "type": "color",
+            "id": "h2_color",
+            "label": "Headline 2 Color",
+            "default": "#E68A3F"
+        },
+        {
+            "type": "text",
+            "id": "sub",
+            "label": "Subheader"
+        },
+         {
+            "type": "text",
+            "id": "button",
+            "label": "Link Text"
+        },
+        {
+            "type": "url",
+            "id": "button_url",
+            "label": "Link URL"
+        },
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+        }
+    ],
+    "presets": [
+        {
+        "name": "Why Orange Animation"
+        }
+    ]
+}
+{% endschema %}
