@@ -52,6 +52,19 @@
         "image": "shopify:\/\/shop_images\/Group_122.png"
       }
     },
+    "32cabfe6-faa7-44a2-b040-0a63b0412ff5": {
+      "type": "swp-animated-why-orange",
+      "settings": {
+        "headline1": "Why",
+        "h1_color": "#272727",
+        "headline2": "Orange?",
+        "h2_color": "#E68A3F",
+        "sub": "Discover why Orange Insoles are the industry leading solution to foot comfort.",
+        "button": "Learn More",
+        "button_url": "",
+        "video": "shopify:\/\/files\/videos\/Orange_Insoles_Animation_Explode.mp4"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "disabled": true,
@@ -272,6 +285,7 @@
     "4f656a01-441d-4f0b-85a0-411f441ae5b4",
     "d5d59bc5-daa6-465b-9491-c16f3c031d42",
     "a3748ab0-1fe3-4bb9-8bed-f87c54ac9c1d",
+    "32cabfe6-faa7-44a2-b040-0a63b0412ff5",
     "image_banner",
     "rich_text",
     "featured_collection",

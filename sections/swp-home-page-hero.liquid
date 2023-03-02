@@ -1,9 +1,7 @@
 {% liquid 
     assign background = section.settings.background
     assign first = section.settings.first
-    assign first_color = section.settings.first_color
     assign second = section.settings.second
-    assign second_color = section.settings.second_color
     assign description = section.settings.description
     assign button = section.settings.button
     assign url = section.settings.button_url
@@ -15,8 +13,8 @@
         <div class="ds:mx-9 dm:max-w-screen-dm dm:mx-auto dm:px-10 dl:px-0">
             <div class="flex flex-col absolute z-10 w-full mt-20">
                 <div class="font-bold text-[125px] w-7/12 mb-3">
-                    <div class="tracking-tighter leading-none" style="color:{{ first_color }};">{{ first }}</div>
-                    <div class="tracking-tighter leading-none" style="color:{{ second_color }};">{{ second }}</div>
+                    <div class="text-[#272727] tracking-tighter leading-none">{{ first }}</div>
+                    <div class="text-[#E68A3F] tracking-tighter leading-none">{{ second }}</div>
                 </div>
                 <div class="text-[24px] text-[#4E4E4E] w-1/2 mb-9">{{ description }}</div>
                 <div class="flex items-center gap-4 divide-x-2 divide-[#D8D8D8]">
@@ -40,22 +38,10 @@
             "label": "First Headline"
         },
         {
-            "type": "color",
-            "id": "first_color",
-            "label": "First Headline Color",
-            "default": "#272727"
-        },
-        {
             "type": "text",
             "id": "second",
             "label": "Second Headline"
         },
-        {
-            "type": "color",
-            "id": "second_color",
-            "label": "Second Headline Color",
-            "default": "#E68A3F"
-        }
         {
             "type": "text",
             "id": "description",
