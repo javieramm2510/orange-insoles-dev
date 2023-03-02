@@ -3,11 +3,12 @@
     "4f656a01-441d-4f0b-85a0-411f441ae5b4": {
       "type": "swp-home-page-hero",
       "settings": {
-        "banner": "shopify:\/\/shop_images\/Hero-Orange-Insole.png",
+        "background": "shopify:\/\/shop_images\/Hero-Orange-Insole.png",
+        "first": "",
+        "second": "",
+        "description": "",
         "button": "",
-        "button_link": "",
-        "label_color": "#231f20",
-        "btn_color": "#ffffff"
+        "button_url": ""
       }
     },
     "image_banner": {
