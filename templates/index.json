@@ -4,11 +4,12 @@
       "type": "swp-home-page-hero",
       "settings": {
         "background": "shopify:\/\/shop_images\/Hero-Orange-Insole.png",
-        "first": "",
-        "second": "",
-        "description": "",
-        "button": "",
-        "button_url": ""
+        "first": "Feel better.",
+        "second": "Do more!",
+        "description": "<p>Orange Insoles, we can help you reduce pain and increase performance.<\/p>",
+        "button": "Shop Insoles",
+        "button_url": "",
+        "logo": "shopify:\/\/shop_images\/Trustpilot-review.jpg"
       }
     },
     "image_banner": {
