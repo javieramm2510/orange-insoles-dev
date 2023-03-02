@@ -17,8 +17,8 @@
                     <a href="{{ url }}"><img class="absolute right-14 object-cover rounded-3xl w-4/6 h-[450px]" src="{{ image | image_url }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
                 </div>             
             {% elsif forloop.index >= 2 %}
-                <div class="col-span-2 relative bg-black rounded-3xl px-10 py-12">
-                    <div class="absolute z-10 w-1/2">
+                <div class="col-span-2 relative bg-black rounded-3xl px-9 py-10">
+                    <div class="absolute z-10 w-7/12">
                         <a href="{{ url }}" title="{{ title }}"><h2 class="font-bold text-[35px] text-white">{{ title }}</h2></a>
                         <p class="text-[17px] text-white mb-6">{{ description }}</p>
                         <a href="{{ url }}" title="{{ title }}" class="font-medium text-[22px] text-[#E68A3F]">Buy Now →</a>
