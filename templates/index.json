@@ -12,8 +12,39 @@
         "logo": "shopify:\/\/shop_images\/Screenshot_2022-11-21_at_7.26_1.png"
       }
     },
+    "d5d59bc5-daa6-465b-9491-c16f3c031d42": {
+      "type": "swp-cards-product-selector-main",
+      "blocks": {
+        "46715844-1a18-48cc-8a06-a1ed777d2116": {
+          "type": "product",
+          "settings": {
+            "product": "orange-full"
+          }
+        },
+        "67ba3d4e-66fd-43a0-a728-c4d0ad040c40": {
+          "type": "product",
+          "settings": {
+            "product": "orange-3-4"
+          }
+        },
+        "5302f9a4-c82d-4e08-87cc-0ee5e06f339c": {
+          "type": "product",
+          "settings": {
+            "product": "orange-full"
+          }
+        }
+      },
+      "block_order": [
+        "46715844-1a18-48cc-8a06-a1ed777d2116",
+        "67ba3d4e-66fd-43a0-a728-c4d0ad040c40",
+        "5302f9a4-c82d-4e08-87cc-0ee5e06f339c"
+      ],
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -60,6 +91,7 @@
     },
     "rich_text": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -90,6 +122,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -117,6 +150,7 @@
     },
     "collage": {
       "type": "collage",
+      "disabled": true,
       "blocks": {
         "collection-0": {
           "type": "collection",
@@ -156,6 +190,7 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -170,6 +205,7 @@
     },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column1": {
           "type": "column",
@@ -224,6 +260,7 @@
   },
   "order": [
     "4f656a01-441d-4f0b-85a0-411f441ae5b4",
+    "d5d59bc5-daa6-465b-9491-c16f3c031d42",
     "image_banner",
     "rich_text",
     "featured_collection",
