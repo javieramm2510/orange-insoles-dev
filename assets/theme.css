@@ -605,6 +605,10 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mb-60 {
+  margin-bottom: 15rem;
+}
+
 .block {
   display: block;
 }
@@ -692,6 +696,14 @@ video {
   text-align: center;
 }
 
+.text-\[125px\] {
+  font-size: 125px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -702,6 +714,16 @@ video {
 
 .italic {
   font-style: italic;
+}
+
+.text-\[\#272727\] {
+  --tw-text-opacity: 1;
+  color: rgb(39 39 39 / var(--tw-text-opacity));
+}
+
+.text-\[\#E68A3F\] {
+  --tw-text-opacity: 1;
+  color: rgb(230 138 63 / var(--tw-text-opacity));
 }
 
 .outline {
