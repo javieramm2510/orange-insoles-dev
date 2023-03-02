@@ -624,6 +624,10 @@ video {
   right: -1.25rem;
 }
 
+.-right-40 {
+  right: -10rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -768,6 +772,10 @@ video {
 
 .w-\[160px\] {
   width: 160px;
+}
+
+.w-\[170px\] {
+  width: 170px;
 }
 
 .max-w-min {
