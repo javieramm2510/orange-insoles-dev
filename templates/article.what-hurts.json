@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "main": {
+      "type": "swp-variable-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "content",
+        "link"
+      ],
+      "settings": {
+      }
+    },
+    "orange_guarantee": {
+      "type": "swp-orange-guarantee"
+    },
+    "surprising_truth": {
+      "type": "swp-content-surprising-truth"
+    },
+    "what_hurts": {
+      "type": "swp-cards-by-condition",
+      "settings": {
+        "heading": "What Hurts?",
+        "heading_size": "h1",
+        "columns_desktop": 4,
+        "show_date": false,
+        "show_view_all": false,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "post_limit": 4,
+        "blog": "Conditions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "surprising_truth",
+    "what_hurts",
+    "orange_guarantee"
+  ]
+}

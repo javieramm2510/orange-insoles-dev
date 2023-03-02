@@ -1,0 +1,89 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "trustpilot": {
+      "type": "swp-reviews-trustpilot-main",
+      "settings": {
+        "padding_bottom": 40,
+        "padding_top": 40
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "color_scheme": "background-2"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get the latest Orange Insights!"
+          }
+        },
+        "email_form": {
+          "type": "email_form"
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>25,889 people trust our content to help them Feel Better & Do More!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ]
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Info",
+            "menu": "footer"
+          }
+        },
+        "footer-2": {
+          "type": "text",
+          "settings": {
+            "heading": "Our mission",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "footer-2"
+      ],
+      "settings": {
+        "color_scheme": "accent-1",
+        "newsletter_enable": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "trustpilot",
+    "newsletter",
+    "footer"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "main": {
+      "type":"main-page",
+      "settings":{}
+    },
+    "animated-why-orange": {
+      "type":"swp-animated-why-orange",
+      "settings":{}
+    },
+    "meet-the-team": {
+      "type":"swp-meet-the-team",
+      "settings":{}
+    },
+    "reviews-trust-pilot": {
+      "type":"swp-reviews-trustpilot-main",
+      "settings":{}
+    },
+    "animated-text-orange-guarantee": {
+      "type":"swp-animated-oi-text",
+      "settings":{}
+    },
+    "orange-guarantee-white": {
+      "type":"swp-orange-guarantee",
+      "settings":{}
+    },
+    "giving-back": {
+      "type":"swp-giving-back",
+      "settings":{}
+    },
+    "subscribe-main": {
+      "type":"swp-subscribe-main",
+      "settings":{}
+    }
+  },
+  "order": [
+    "main",
+    "animated-why-orange",
+    "meet-the-team",
+    "reviews-trust-pilot",
+    "animated-text-orange-guarantee",
+    "orange-guarantee-white",
+    "giving-back",
+    "subscribe-main"
+  ]
+}

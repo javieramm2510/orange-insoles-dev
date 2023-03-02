@@ -1,0 +1,219 @@
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .section-{{ section.id }}-border-radius {
+    border-radius: {{ section.settings.border_radius }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
+  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding section-{{ section.id }}-border-radius">
+    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
+      <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+        {% if 'header' %}
+          <h2 class="rich-text__heading rte inline-richtext {{section.settings.heading_size}}">
+            {{ section.settings.header}}
+          </h2>
+        {% endif %}
+        
+        {% if 'text' %}
+          <div class="rich-text__text rte">
+            {{ section.settings.text }}
+          </div>
+          
+        {% endif %}
+
+        {% if 'linktext' %}
+          <div class="rich-text__buttons">
+            <a role="link" aria-disabled="false" href="{{ section.settings.linkurl }}"
+               class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
+               {{ section.settings.linktext }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "The Surprising Truth",
+    "settings": [
+      {
+        "id": "header",
+        "type": "text",
+        "label": "Header",
+        "default": "The Surprising Truth About Many Injuries"
+      },
+      {
+        "id": "text",
+        "type": "richtext",
+        "label": "Section Text",
+        "default": "<p>Whether you experience hip, back, ankle, or foot pain, we recommend taking a look at your shoes. Often, they don’t offer much support, or they offer the wrong type of support to keep your body in alignment. Our comfortable insoles offer the support you need and help alleviate the symptoms.</p>"
+      },
+      {
+        "id": "linktext",
+        "type": "text",
+        "label": "Link Text",
+        "default": "Discover the Truth"
+      },
+      {
+        "id": "linkurl",
+        "type": "url",
+        "label": "URL",
+        "default": "/"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__1.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__2.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__3.label"
+          },
+          {
+            "value": "hxl",
+            "label": "t:sections.all.heading_size.options__4.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+        "type": "select",
+        "id": "desktop_content_position",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.rich-text.settings.desktop_content_position.options__1.label"
+          },
+          {
+            "value": "center",
+            "label": "t:sections.rich-text.settings.desktop_content_position.options__2.label"
+          },
+          {
+            "value": "right",
+            "label": "t:sections.rich-text.settings.desktop_content_position.options__3.label"
+          }
+        ],
+        "default": "center",
+        "label": "t:sections.rich-text.settings.desktop_content_position.label",
+        "info": "t:sections.rich-text.settings.desktop_content_position.info"
+      },
+      {
+        "type": "select",
+        "id": "content_alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.rich-text.settings.content_alignment.options__1.label"
+          },
+          {
+            "value": "center",
+            "label": "t:sections.rich-text.settings.content_alignment.options__2.label"
+          },
+          {
+            "value": "right",
+            "label": "t:sections.rich-text.settings.content_alignment.options__3.label"
+          }
+        ],
+        "default": "center",
+        "label": "t:sections.rich-text.settings.content_alignment.label"
+      },
+      {
+        "type": "select",
+        "id": "color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          },
+          {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "background-1",
+        "label": "t:sections.all.colors.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "default": false,
+        "label": "t:sections.rich-text.settings.full_width.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      },
+      {
+        "type": "number",
+        "id": "border_radius",
+        "label": "Border Radius (if not full width)",
+        "default": 0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Content Block - The Surprising Truth"
+      }
+    ]
+  }
+{% endschema %}

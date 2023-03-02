@@ -1,0 +1,93 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+ 
+<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+  <div class="section-{{ section.id }}-padding">
+      <div class="center">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.trustpilot_heading}}</h2>
+      </div>
+      <!-- TrustBox widget - Slider -->
+      <div class="trustpilot-widget" data-locale="en-US" data-template-id="54ad5defc6454f065c28af8b" data-businessunit-id="5d93991297c28400015e226e" data-style-height="240px" data-style-width="100%" data-theme="light" data-stars="3,4,5" data-review-languages="en" data-text-color="#F58426">
+      <a href="https://www.trustpilot.com/review/www.orangeinsoles.com" target="_blank" rel="noopener">Trustpilot</a>
+      </div>
+      <!-- End TrustBox widget -->
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Trustpilot Reviews",
+    "settings": [
+      {
+      "type": "inline_richtext",
+      "id": "trustpilot_heading",
+      "default": "People Love Our Insoles!",
+      "label": "t:sections.featured-collection.settings.title.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__1.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__2.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__3.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "t:sections.featured-collection.settings.full_width.label",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Trustpilot Review Banner"
+      }
+    ]
+  }
+{% endschema %}
