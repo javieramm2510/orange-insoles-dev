@@ -14,7 +14,7 @@
                         <p class="text-[18px] text-white mb-5">{{ description }}</p>
                         <a href="{{ url }}" title="{{ title }}" class="font-medium text-[22px] text-white">Buy Now →</a>
                     </div>
-                    <a href="{{ url }}"><img class="absolute right-12 object-cover rounded-3xl w-4/6 h-[404px]]" src="{{ image | image_url }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
+                    <a href="{{ url }}"><img class="absolute right-12 object-cover rounded-3xl w-4/6 h-[404px]" src="{{ image | image_url }}" title="{{ title }}" alt="{{ image.alt }}" loading="lazy"></a>
                 </div>             
             {% elsif forloop.index >= 2 %}
                 <div class="col-span-2 relative group bg-black rounded-2xl">
