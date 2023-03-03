@@ -4,7 +4,6 @@
   "sections": {
     "trustpilot": {
       "type": "swp-reviews-trustpilot-main",
-      "disabled": true,
       "settings": {
         "trustpilot_heading": "People Love Our Insoles!",
         "heading_size": "h1",
@@ -15,7 +14,6 @@
     },
     "newsletter": {
       "type": "newsletter",
-      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -50,7 +48,6 @@
     },
     "footer": {
       "type": "footer",
-      "disabled": true,
       "blocks": {
         "footer-0": {
           "type": "link_list",

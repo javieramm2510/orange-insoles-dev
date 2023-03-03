@@ -2,7 +2,6 @@
   "sections": {
     "4f656a01-441d-4f0b-85a0-411f441ae5b4": {
       "type": "swp-home-page-hero",
-      "disabled": true,
       "settings": {
         "first": "Feel better.",
         "second": "Do more!",
@@ -45,7 +44,6 @@
     },
     "a3748ab0-1fe3-4bb9-8bed-f87c54ac9c1d": {
       "type": "swp-quiz-find-right-insoles",
-      "disabled": true,
       "settings": {
         "headline": "Find the right insoles",
         "sub": "Take the insole finder quiz to discover which insoles are best for you.",
