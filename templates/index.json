@@ -14,6 +14,7 @@
     },
     "d5d59bc5-daa6-465b-9491-c16f3c031d42": {
       "type": "swp-cards-product-selector-main",
+      "disabled": true,
       "blocks": {
         "46715844-1a18-48cc-8a06-a1ed777d2116": {
           "type": "product",
@@ -44,6 +45,7 @@
     },
     "a3748ab0-1fe3-4bb9-8bed-f87c54ac9c1d": {
       "type": "swp-quiz-find-right-insoles",
+      "disabled": true,
       "settings": {
         "headline": "Find the right insoles",
         "sub": "Take the insole finder quiz to discover which insoles are best for you.",
@@ -54,6 +56,7 @@
     },
     "32cabfe6-faa7-44a2-b040-0a63b0412ff5": {
       "type": "swp-animated-why-orange",
+      "disabled": true,
       "settings": {
         "headline1": "Why",
         "h1_color": "#272727",
