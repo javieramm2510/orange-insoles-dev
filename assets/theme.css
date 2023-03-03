@@ -806,6 +806,10 @@ video {
   border-color: rgb(216 216 216 / var(--tw-divide-opacity));
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;

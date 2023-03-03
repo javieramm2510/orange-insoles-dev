@@ -15,7 +15,7 @@
                 <a href="{{ url }}" title="{{ url.title }}" class="flex items-center justify-center font-bold text-[10px] text-center text-white bg-[#E68A3F] rounded-2xl w-[120px] px-10 py-4 ts:text-[15px] ts:w-[145px] ds:text-[20px] ds:w-[170px]">{{ button }}</a>
             </div>
         </div>
-        <img class="absolute -right-20 object-cover w-full h-full ts:-right-[7.5rem] ds:-right-40 ds:w-8/12" src="{{ image | image_url }}" alt="{{ image.alt }}" title="{{ image.title }}" loading="lazy">
+        <img class="absolute -right-20 object-cover overflow-hidden w-full h-full ts:-right-[7.5rem] ds:-right-40 ds:w-8/12" src="{{ image | image_url }}" alt="{{ image.alt }}" title="{{ image.title }}" loading="lazy">
     </div>
 </div>
 
