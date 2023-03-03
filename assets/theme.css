@@ -1458,6 +1458,10 @@ video {
   font-size: 19px;
 }
 
+.text-\[18px\] {
+  font-size: 18px;
+}
+
 .font-bold {
   font-weight: 700;
 }

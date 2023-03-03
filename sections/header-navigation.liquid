@@ -361,15 +361,15 @@
     
     <div class="hidden z-10 text-[#272727] bg-white shadow-sp mb-10 ds:block">
         <div class="flex justify-between items-center gap-[20px] divide-x-2 divide-[#BBBBBB] py-[36px] ds:mx-9 dm:mx-auto dm:max-w-screen-dm dm:px-10 dl:px-4">
-            <div class="flex justify-between items-center gap-[64px]">
-                <div class="relative p-4 m-auto dm:max-w-screen-dm">
+            <div class="flex justify-between items-center">
+                <div class="relative m-auto dm:max-w-screen-dm">
                     {% if nav_menu != blank %}
                         <ul class="flex justify-evenly gap-[24px]">
                             {% for link in nav_menu.links %}
                             {% if forloop.index <= 3 %}
                                 <li>
                                 <div class="group peer">
-                                    <a class="flex items-center gap-2 text-[19px] font-medium" href="{{ link.url }}">
+                                    <a class="flex items-center gap-2 text-[18px] font-bold" href="{{ link.url }}">
                                         {{ link.title }}
                                         {% if link.links.size > 0 %}
                                             <span class="transition-all duration-300 ease-in-out group-hover:rotate-180">{% render 'icons', icon: 'dropdown' %}</span> 
@@ -397,14 +397,14 @@
                 <a href="#" title="Orange Insoles">
                     {% render 'icons', icon: 'logo' %}
                 </a>
-                <div class="relative p-4 m-auto dm:max-w-screen-dm">
+                <div class="relative m-auto dm:max-w-screen-dm">
                     {% if nav_menu != blank %}
                         <ul class="flex justify-evenly gap-[24px]">
                             {% for link in nav_menu.links %}
                             {% if forloop.index > 3 %}
                                 <li>
                                 <div class="group peer">
-                                    <a class="flex items-center gap-2 text-[19px] font-medium" href="{{ link.url }}">
+                                    <a class="flex items-center gap-2 text-[18px] font-bold" href="{{ link.url }}">
                                         {{ link.title }}
                                         {% if link.links.size > 0 %}
                                             <span class="transition-all duration-300 ease-in-out group-hover:rotate-180">{% render 'icons', icon: 'dropdown' %}</span> 
