@@ -364,7 +364,7 @@
             <div class="flex justify-between items-center">
                 <div class="relative m-auto dm:max-w-screen-dm">
                     {% if nav_menu != blank %}
-                        <ul class="flex justify-evenly gap-[24px]">
+                        <ul class="flex justify-evenly gap-[20px]">
                             {% for link in nav_menu.links %}
                             {% if forloop.index <= 3 %}
                                 <li>
@@ -394,12 +394,12 @@
                         </ul>
                     {% endif %}
                 </div>
-                <a href="#" title="Orange Insoles">
+                <a href="#" title="Orange Insoles" class="max-w-[200px]">
                     {% render 'icons', icon: 'logo' %}
                 </a>
                 <div class="relative m-auto dm:max-w-screen-dm">
                     {% if nav_menu != blank %}
-                        <ul class="flex justify-evenly gap-[24px]">
+                        <ul class="flex justify-evenly gap-[20px]">
                             {% for link in nav_menu.links %}
                             {% if forloop.index > 3 %}
                                 <li>
@@ -430,7 +430,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="flex justify-between items-center gap-[24px] pl-[20px]">
+            <div class="flex justify-between items-center gap-[20px] pl-[20px]">
                 <a href="#">
                     {% render 'icons', icon: 'user' %}
                 </a>
