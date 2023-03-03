@@ -93,6 +93,53 @@
         "image": "shopify:\/\/shop_images\/Group_117.png"
       }
     },
+    "58a8093b-18b2-4cdf-9dd3-791a737e8666": {
+      "type": "swp-team-members",
+      "blocks": {
+        "b8ea76af-2822-4616-a72b-5672384f132d": {
+          "type": "member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/owen.png",
+            "name": "Owen",
+            "occupation": "Business Dev"
+          }
+        },
+        "b5e72207-caa0-4a22-beba-9c51c19d725b": {
+          "type": "member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brad.png",
+            "name": "Brad",
+            "occupation": "Shipping Manager"
+          }
+        },
+        "25c28f40-bdad-4231-99ff-a54776b8c9b2": {
+          "type": "member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/marsha.png",
+            "name": "Marsha",
+            "occupation": "Operations & Founder"
+          }
+        },
+        "74daa269-83e0-40c9-ae3f-83a57a32e883": {
+          "type": "member",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tom.png",
+            "name": "Tom",
+            "occupation": "Product Dev & Founder"
+          }
+        }
+      },
+      "block_order": [
+        "b8ea76af-2822-4616-a72b-5672384f132d",
+        "b5e72207-caa0-4a22-beba-9c51c19d725b",
+        "25c28f40-bdad-4231-99ff-a54776b8c9b2",
+        "74daa269-83e0-40c9-ae3f-83a57a32e883"
+      ],
+      "settings": {
+        "title": "Meet the Orange Team",
+        "sub": "Discover why Orange Insoles are the industry leading solution to foot comfort."
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "disabled": true,
@@ -316,6 +363,7 @@
     "32cabfe6-faa7-44a2-b040-0a63b0412ff5",
     "9c562bca-8246-4069-b9fe-c2802db7f32c",
     "bb3a2b42-7847-4cae-93af-54bb2f2cc6cc",
+    "58a8093b-18b2-4cdf-9dd3-791a737e8666",
     "image_banner",
     "rich_text",
     "featured_collection",
