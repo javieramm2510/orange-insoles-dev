@@ -14,7 +14,6 @@
     },
     "d5d59bc5-daa6-465b-9491-c16f3c031d42": {
       "type": "swp-cards-product-selector-main",
-      "disabled": true,
       "blocks": {
         "46715844-1a18-48cc-8a06-a1ed777d2116": {
           "type": "product",
