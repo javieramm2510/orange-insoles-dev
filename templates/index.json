@@ -1,11 +1,5 @@
 {
   "sections": {
-    "ae8af34a-3030-4bc8-80e2-d6309429a79b": {
-      "type": "header-navigation",
-      "settings": {
-        "nav_menu": "orange-nav-menu"
-      }
-    },
     "4f656a01-441d-4f0b-85a0-411f441ae5b4": {
       "type": "swp-home-page-hero",
       "settings": {
@@ -363,7 +357,6 @@
     }
   },
   "order": [
-    "ae8af34a-3030-4bc8-80e2-d6309429a79b",
     "4f656a01-441d-4f0b-85a0-411f441ae5b4",
     "d5d59bc5-daa6-465b-9491-c16f3c031d42",
     "a3748ab0-1fe3-4bb9-8bed-f87c54ac9c1d",
