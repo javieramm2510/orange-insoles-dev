@@ -589,6 +589,10 @@ video {
   top: 0px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -692,6 +696,10 @@ video {
 
 .h-4\/5 {
   height: 80%;
+}
+
+.h-\[88px\] {
+  height: 88px;
 }
 
 .max-h-\[40px\] {
