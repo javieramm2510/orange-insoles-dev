@@ -887,6 +887,14 @@ video {
   font-size: 60px;
 }
 
+.text-\[14px\] {
+  font-size: 14px;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -996,6 +1004,14 @@ video {
   .ts\:text-\[80px\] {
     font-size: 80px;
   }
+
+  .ts\:text-\[14px\] {
+    font-size: 14px;
+  }
+
+  .ts\:text-\[40px\] {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1058,6 +1074,26 @@ video {
 
   .ds\:text-\[24px\] {
     font-size: 24px;
+  }
+
+  .ds\:text-\[17px\] {
+    font-size: 17px;
+  }
+
+  .ds\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .ds\:text-\[22px\] {
+    font-size: 22px;
+  }
+
+  .ds\:text-\[35px\] {
+    font-size: 35px;
+  }
+
+  .ds\:text-\[50px\] {
+    font-size: 50px;
   }
 }
 
