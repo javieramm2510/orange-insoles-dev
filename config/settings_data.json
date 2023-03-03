@@ -140,7 +140,7 @@
       "header-navigation": {
         "type": "header-navigation",
         "settings": {
-          "nav_menu": "orange-nav-menu"
+          "nav_menu": ""
         }
       }
     },
