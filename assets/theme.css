@@ -674,6 +674,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1133,6 +1137,10 @@ video {
 
   .ds\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .ds\:ml-0 {
+    margin-left: 0px;
   }
 
   .ds\:h-\[600px\] {
