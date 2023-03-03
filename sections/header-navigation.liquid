@@ -395,7 +395,7 @@
             <a href="#" title="Orange Insoles">
                 {% render 'icons', icon: 'logo' %}
             </a>
-            <div class="relative p-4 m-auto dm:max-w-screen-dm">
+            {% comment %} <div class="relative p-4 m-auto dm:max-w-screen-dm">
                 {% if nav_menu != blank %}
                     <ul class="flex justify-evenly">
                         {% for link in nav_menu.links %}
@@ -425,7 +425,7 @@
                         {% endfor %}
                     </ul>
                 {% endif %}
-            </div>
+            </div> {% endcomment %}
             <a href="#">
                 {% render 'icons', icon: 'user' %}
             </a>
