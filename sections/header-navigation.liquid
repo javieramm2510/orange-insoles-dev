@@ -364,8 +364,7 @@
             <div class="relative p-4 m-auto dm:max-w-screen-dm">
                 {% if nav_menu != blank %}
                     <ul class="flex justify-evenly">
-                        {% for link in nav_menu.links %}
-                        {% if forloop.index <= 3 %}
+                        {% for link in nav_menu.links limit: 3 %}
                             <li>
                             <div class="group peer">
                                 <a class="flex items-center gap-2 text-xl font-bold" href="{{ link.url }}">
@@ -388,7 +387,6 @@
                                 <div class="fixed -z-10 top-12 right-0 transition-all duration-300 ease-in-out invisible opacity-0 backdrop-blur-[2px] bg-gray-600/50 peer-hover:visible peer-hover:opacity-100 w-screen h-screen"></div>
                             {% endif %}
                             </li>
-                        {% endif %}
                         {% endfor %}
                     </ul>
                 {% endif %}
