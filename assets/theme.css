@@ -1006,6 +1006,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\#3A3A3A\] {
+  --tw-text-opacity: 1;
+  color: rgb(58 58 58 / var(--tw-text-opacity));
+}
+
 .outline {
   outline-style: solid;
 }
@@ -1068,6 +1073,14 @@ video {
     width: 145px;
   }
 
+  .ts\:max-w-\[340px\] {
+    max-width: 340px;
+  }
+
+  .ts\:max-w-\[480px\] {
+    max-width: 480px;
+  }
+
   .ts\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1078,6 +1091,22 @@ video {
 
   .ts\:grid-rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .ts\:flex-row {
+    flex-direction: row;
+  }
+
+  .ts\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .ts\:justify-between {
+    justify-content: space-between;
+  }
+
+  .ts\:text-center {
+    text-align: center;
   }
 
   .ts\:text-\[15px\] {
@@ -1102,6 +1131,10 @@ video {
 
   .ts\:text-\[45px\] {
     font-size: 45px;
+  }
+
+  .ts\:text-\[85px\] {
+    font-size: 85px;
   }
 }
 
@@ -1207,6 +1240,14 @@ video {
     width: 170px;
   }
 
+  .ds\:max-w-\[440px\] {
+    max-width: 440px;
+  }
+
+  .ds\:max-w-\[580px\] {
+    max-width: 580px;
+  }
+
   .ds\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -1270,6 +1311,10 @@ video {
 
   .ds\:text-\[60px\] {
     font-size: 60px;
+  }
+
+  .ds\:text-\[110px\] {
+    font-size: 110px;
   }
 }
 

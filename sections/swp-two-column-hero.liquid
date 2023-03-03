@@ -1,0 +1,55 @@
+{% liquid 
+    assign title1 = section.settings.title1
+    assign t1_color = section.settings.t1_color
+    assign title2 = section.settings.title2
+    assign t2_color = section.settings.t2_color
+    assign text = section.settings.text
+%}
+
+<div class="mx-5 mb-20 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 ds:mb-40 dl:px-0">
+    <div class="flex flex-col items-center ts:flex-row ts:justify-between">
+        <h2 class="font-bold text-[60px] mb-4 ts:text-[85px] ts:max-w-[340px] ds:text-[110px] ds:max-w-[440px]"><span style="color:{{ h1_color }};">{{ headline1 }}</span> <span style="color:{{ h2_color }};">{{ headline2 }}</span></h2>
+        <div class="text-[12px] text-[#3A3A3A] mb-8 ts:text-[15px] ts:max-w-[480px] ds:text-[18px] ds:max-w-[580px]">{{ text }}</div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "2 Column Hero Text",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title1",
+            "label": "Title 1 Text"
+        },
+        {
+            "type": "color",
+            "id": "t1_color",
+            "label": "Title 1 Color",
+            "default": "#272727"
+        },
+        {
+            "type": "text",
+            "id": "title2",
+            "label": "Title 2 Text"
+        },
+        {
+            "type": "color",
+            "id": "t2_color",
+            "label": "Title 2 Color",
+            "default": "#E68A3F"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text Section"
+        }
+    ],
+    "presets": [
+        {
+        "name": "2 Column Hero Text"
+        }
+    ]
+}
+{% endschema %}
