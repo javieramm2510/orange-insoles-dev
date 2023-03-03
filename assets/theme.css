@@ -1109,6 +1109,10 @@ video {
     gap: 1.5rem;
   }
 
+  .ts\:gap-20 {
+    gap: 5rem;
+  }
+
   .ts\:text-center {
     text-align: center;
   }
