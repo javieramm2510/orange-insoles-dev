@@ -827,6 +827,11 @@ video {
      object-fit: cover;
 }
 
+.object-top {
+  -o-object-position: top;
+     object-position: top;
+}
+
 .p-\[20px\] {
   padding: 20px;
 }

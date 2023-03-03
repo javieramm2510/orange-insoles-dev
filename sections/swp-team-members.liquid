@@ -16,7 +16,7 @@
                 assign occupation = block.settings.occupation
             %}
             <div class="flex flex-col relative rounded-3xl h-[400px] mm:h-[500px] ds:h-[430px]">
-                <img class="object-cover rounded-3xl w-full h-full" src="{{ image | image_url }}" title="{{ image.title }}" alt="{{ image.alt }}" loading="lazy">
+                <img class="object-cover object-top rounded-3xl w-full h-full" src="{{ image | image_url }}" title="{{ image.title }}" alt="{{ image.alt }}" loading="lazy">
                 <div class="flex flex-col justify-between absolute bottom-0 text-white bg-[#E68A3F] rounded-3xl w-full h-[88px] px-[20px] py-[12px]">
                     <h3 class="font-medium text-[20px] text-white mm:text-[30px]">{{ name }}</h3></a>
                     <p class="text-[14px] text-white mm:text-[17px]">{{ occupation }}</p>
