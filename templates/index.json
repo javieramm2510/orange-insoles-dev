@@ -18,18 +18,27 @@
         "46715844-1a18-48cc-8a06-a1ed777d2116": {
           "type": "product",
           "settings": {
+            "image": "shopify:\/\/shop_images\/orange_full-web_3.png",
+            "title": "Orange Full",
+            "description": "Best for athletic, running & walking shoes, hiking & industrial footwear including boots that have a removable factory liner",
             "product": "orange-full"
           }
         },
         "67ba3d4e-66fd-43a0-a728-c4d0ad040c40": {
           "type": "product",
           "settings": {
+            "image": "shopify:\/\/shop_images\/orange_3quarter-web_1.png",
+            "title": "Orange 3\/4",
+            "description": "Best for athletic, running & walking shoes, hiking & industrial footwear including boots that DO NOT have a removable factory liner",
             "product": "orange-3-4"
           }
         },
         "5302f9a4-c82d-4e08-87cc-0ee5e06f339c": {
           "type": "product",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Orange_Light_Amazon_test_large_3.png",
+            "title": "Orange Light",
+            "description": "Best for slim spaced shoe beds like cowboy boots, high heels, athletic cleats, golf shoes, boat shoes, and mary jane flat shoes",
             "product": "orange-light"
           }
         }
@@ -71,7 +80,7 @@
         "title1": "Why go",
         "t1_color": "#272727",
         "title2": "Orange?",
-        "t2_color": "#E68A3F",
+        "t2_color": "#e68a3f",
         "text": "<p>We created Orange Insoles because we saw just how many people are stopped from doing the things they enjoy because of pain. Unnecessary pain. Pain caused by misalignment that's easily corrected with simple insoles designed to re-align your body. <br\/><br\/>With Orange Insoles, we can help you reduce pain and increase performance. <strong>We can help you feel better.<\/strong><\/p>"
       }
     },
