@@ -2,9 +2,9 @@
     <div class="grid grid-rows-3 gap-4 h-[650px] ts:grid-cols-2 ts:grid-rows-2 ds:grid-cols-5 ds:h-[500px]">
         {% for block in section.blocks %}
             {% liquid  
-                assign image = block.settings.product.featured_image
-                assign title = block.settings.product.title
-                assign description = block.settings.product.description
+                assign image = block.settings.image
+                assign title = block.settings.title
+                assign description = block.settings.description
                 assign url = block.settings.product.url
             %}
             {% if forloop.index == 1 %}
@@ -42,6 +42,21 @@
             "name": "Product",
             "type": "product",
             "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description"
+                },
                 {
                     "type": "product",
                     "id": "product",
