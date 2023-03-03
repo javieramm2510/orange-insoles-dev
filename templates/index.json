@@ -2,6 +2,7 @@
   "sections": {
     "4f656a01-441d-4f0b-85a0-411f441ae5b4": {
       "type": "swp-home-page-hero",
+      "disabled": true,
       "settings": {
         "first": "Feel better.",
         "second": "Do more!",
