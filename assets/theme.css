@@ -662,6 +662,10 @@ video {
   margin-top: 5rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .block {
   display: block;
 }
@@ -1053,6 +1057,14 @@ video {
   .ds\:mx-9 {
     margin-left: 2.25rem;
     margin-right: 2.25rem;
+  }
+
+  .ds\:mb-60 {
+    margin-bottom: 15rem;
+  }
+
+  .ds\:mb-32 {
+    margin-bottom: 8rem;
   }
 
   .ds\:h-\[600px\] {
