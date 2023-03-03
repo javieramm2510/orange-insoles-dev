@@ -1,0 +1,75 @@
+{% liquid 
+    assign title = section.settings.title
+    assign sub = section.settings.sub
+%}
+
+<div class="mx-5 mb-20 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 ds:mb-40 dl:px-0">
+    <div class="flex flex-col items-center text-center mb-14 ds:mb-28">
+        <h2 class="font-bold text-[30px] text-[#272727] max-w-[480px] mb-4 ts:text-[45px] ds:text-[60px]">{{ title }}</h2>
+        <div class="text-[12px] text-[#4E4E4E] max-w-[480px] ts:text-[18px] ds:text-[24px]">{{ sub }}</div>
+    </div>
+    <div class="grid gap-4 ts:grid-cols-2 ts:grid-rows-2 ts:gap-6 ds:grid-cols-4 ds:grid-rows-1 ds:gap-8">
+        {% for block in section.blocks %}
+            {% liquid  
+                assign image = block.settings.image
+                assign name = block.settings.name
+                assign occupation = block.settings.occupation
+            %}
+            <div class="flex flex-col rounded-3xl">
+                <img class="object-cover rounded-t-3xl h-4/5" src="{{ image | image_url }}" title="{{ image.title }}" alt="{{ image.alt }}" loading="lazy">
+                <div class="flex flex-col justify-between text-white bg-[#E68A3F] rounded-3xl w-full h-1/5 p-[20px]">
+                    <h3 class="font-medium text-[30px] text-white ts:text-[30px] ds:text-[30px]">{{ name }}</h3></a>
+                    <p class="text-[17px] text-white ts:text-[17px] ds:text-[17px]">{{ occupation }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Team Members",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "text",
+            "id": "sub",
+            "label": "Subheader"
+        }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+        {
+            "name": "Team Member",
+            "type": "member",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "name",
+                    "label": "Name"
+                },
+                {
+                    "type": "textarea",
+                    "id": "occupation",
+                    "label": "Occupation"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Team Members"
+        }
+    ]
+}
+{% endschema %}
