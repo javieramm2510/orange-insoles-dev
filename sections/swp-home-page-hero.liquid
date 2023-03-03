@@ -11,13 +11,13 @@
 <div class="mb-28 ds:mb-60">
     <div class="relative h-[300px] ts:h-[450px] ds:h-[600px]">
         <div class="ds:mx-9 dm:max-w-screen-dm dm:mx-auto dm:px-10 dl:px-0">
-            <div class="flex flex-col absolute z-10 w-full mt-20">
-                <div class="font-bold text-[40px] w-7/12 ml-5 mb-3 ts:text-[80px] ds:text-[125px] ds:ml-0">
+            <div class="flex flex-col absolute z-10 w-7/12 mt-20 px-5 ds:px-0">
+                <div class="font-bold text-[40px] mb-3 ts:text-[80px] ds:text-[125px]">
                     <div class="text-[#272727] tracking-tighter leading-none">{{ first }}</div>
                     <div class="text-[#E68A3F] tracking-tighter leading-none">{{ second }}</div>
                 </div>
-                <div class="text-[12px] text-[#4E4E4E] w-1/2 ml-5 mb-9 ts:text-[18px] ds:text-[24px] ds:ml-0">{{ description }}</div>
-                <div class="flex items-center gap-4 divide-x-2 divide-[#D8D8D8] ml-5 ds:ml-0">
+                <div class="text-[12px] text-[#4E4E4E] mb-9 ts:text-[18px] ds:text-[24px]">{{ description }}</div>
+                <div class="flex items-center gap-4 divide-x-2 divide-[#D8D8D8]">
                     <a href="{{ url }}" title="{{ url.title }}" class="font-bold text-[10px] text-white bg-[#E68A3F] rounded-2xl px-10 py-4 ts:text-[15px] ds:text-[20px]">{{ button }}</a>
                     <img class="pl-4 max-h-[40px] ts:max-h-[40px] ds:max-h-[40px]" src="{{ logo | image_url }}" alt="{{ logo.alt }}" title="{{ logo.title }}" loading="lazy">
                 </div>

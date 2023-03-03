@@ -1215,6 +1215,11 @@ video {
     padding-bottom: 3rem;
   }
 
+  .ds\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .ds\:text-\[125px\] {
     font-size: 125px;
   }
