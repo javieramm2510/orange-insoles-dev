@@ -8,7 +8,7 @@
                 assign url = block.settings.product.url
             %}
             {% if forloop.index == 1 %}
-                <div class="relative bg-black rounded-3xl px-10 py-12 ts:col-span-2 ds:row-span-2 ds:col-span-3">
+                <div class="relative bg-black rounded-3xl px-5 py-6 ts:col-span-2 ds:row-span-2 ds:col-span-3 ds:px-10 ds:py-12">
                     <div class="absolute z-10 w-8/12 ds:w-1/2">
                         <a href="{{ url }}" title="{{ url.title }}"><h2 class="font-bold text-[30px] text-white ts:text-[40px] ds:text-[50px]">{{ title }}</h2></a>
                         <p class="text-[10px] text-white mb-5 ts:text-[14px] ds:text-[18px]">{{ description }}</p>
@@ -17,7 +17,7 @@
                     <a href="{{ url }}"><img class="absolute right-0 top-0 object-cover rounded-3xl h-full ds:right-14 ds:top-auto ds:h-[450px]" src="{{ image | image_url }}" title="{{ image.title }}" alt="{{ image.alt }}" loading="lazy"></a>
                 </div>             
             {% elsif forloop.index >= 2 %}
-                <div class="relative bg-black rounded-3xl px-9 py-10">
+                <div class="relative bg-black rounded-3xl px-5 py-6 ds:px-9 ds:py-10">
                     <div class="absolute z-10 w-8/12">
                         <a href="{{ url }}" title="{{ url.title }}"><h2 class="font-bold text-[30px] text-white ts:text-[40px] ds:text-[35px]">{{ title }}</h2></a>
                         <p class="text-[10px] text-white mb-6 ts:text-[14px] ds:text-[17px]">{{ description }}</p>
