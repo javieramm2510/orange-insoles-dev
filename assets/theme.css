@@ -718,6 +718,10 @@ video {
   height: 150px;
 }
 
+.h-\[175px\] {
+  height: 175px;
+}
+
 .max-h-\[40px\] {
   max-height: 40px;
 }
@@ -1028,6 +1032,10 @@ video {
     height: 225px;
   }
 
+  .ts\:h-\[250px\] {
+    height: 250px;
+  }
+
   .ts\:max-h-\[40px\] {
     max-height: 40px;
   }
@@ -1129,6 +1137,10 @@ video {
 
   .ds\:h-\[300px\] {
     height: 300px;
+  }
+
+  .ds\:h-\[350px\] {
+    height: 350px;
   }
 
   .ds\:max-h-\[40px\] {
