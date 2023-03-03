@@ -136,8 +136,17 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "header-navigation": {
+        "type": "header-navigation",
+        "settings": {
+          "nav_menu": "orange-nav-menu"
+        }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
