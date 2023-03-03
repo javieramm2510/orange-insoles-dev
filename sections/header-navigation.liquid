@@ -359,16 +359,18 @@
         </div>
     </div> {% endcomment %}
     
-    <div class="hidden z-10 text-white bg-black shadow-sp mb-10 ds:block">
+    <div class="hidden z-10 text-[#272727] bg-white shadow-sp mb-10 ds:block">
         <div class="flex justify-between items-center pt-5 pb-4 ds:mx-9 dm:mx-auto dm:max-w-screen-dm dm:px-10 dl:px-4">
             <div class="relative p-4 m-auto dm:max-w-screen-dm">
                 {% if nav_menu != blank %}
                     <ul class="flex justify-evenly">
                         {% for link in nav_menu.links %}
+                        {% if forloop.index <= 3 %}
                             <li>
                             <div class="group peer">
                                 <a class="flex items-center gap-2 text-xl font-bold" href="{{ link.url }}">
                                     {% if link.links.size > 0 %}
+                                        {{ link.title }}
                                         <span class="transition-all duration-300 ease-in-out group-hover:rotate-180">{% render 'icons', icon: 'dropdown' %}</span> 
                                     {% endif %}
                                 </a>
@@ -386,14 +388,15 @@
                                 <div class="fixed -z-10 top-12 right-0 transition-all duration-300 ease-in-out invisible opacity-0 backdrop-blur-[2px] bg-gray-600/50 peer-hover:visible peer-hover:opacity-100 w-screen h-screen"></div>
                             {% endif %}
                             </li>
+                        {% endif %}
                         {% endfor %}
                     </ul>
                 {% endif %}
             </div>
-            <a href="" title="Orange Insoles">
+            <a href="#" title="Orange Insoles">
                 {% render 'icons', icon: 'logo' %}
             </a>
-            {% comment %} <div class="relative p-4 m-auto dm:max-w-screen-dm">
+            <div class="relative p-4 m-auto dm:max-w-screen-dm">
                 {% if nav_menu != blank %}
                     <ul class="flex justify-evenly">
                         {% for link in nav_menu.links %}
@@ -402,6 +405,7 @@
                             <div class="group peer">
                                 <a class="flex items-center gap-2 text-xl font-bold text-text" href="{{ link.url }}">
                                     {% if link.links.size > 0 %}
+                                        {{ link.title }}
                                         <span class="transition-all duration-300 ease-in-out group-hover:rotate-180">{% render 'icons', icon: 'dropdown' %}</span> 
                                     {% endif %}
                                 </a>
@@ -423,14 +427,14 @@
                         {% endfor %}
                     </ul>
                 {% endif %}
-            </div> {% endcomment %}
-            <a href="">
+            </div>
+            <a href="#">
                 {% render 'icons', icon: 'user' %}
             </a>
-            <a href="">
+            <a href="#">
                 {% render 'icons', icon: 'cart' %}
             </a>
-            <a href="">
+            <a href="#">
                 {% render 'icons', icon: 'burger' %}
             </a>
         </div>
