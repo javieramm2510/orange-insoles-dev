@@ -65,6 +65,16 @@
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/24d28bd765154195b4067724cf468591.mp4"
       }
     },
+    "9c562bca-8246-4069-b9fe-c2802db7f32c": {
+      "type": "swp-two-column-hero",
+      "settings": {
+        "title1": "Why go",
+        "t1_color": "#272727",
+        "title2": "Orange?",
+        "t2_color": "#E68A3F",
+        "text": "<p>We created Orange Insoles because we saw just how many people are stopped from doing the things they enjoy because of pain. Unnecessary pain. Pain caused by misalignment that's easily corrected with simple insoles designed to re-align your body. <br\/><br\/>With Orange Insoles, we can help you reduce pain and increase performance. <strong>We can help you feel better.<\/strong><\/p>"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "disabled": true,
@@ -286,6 +296,7 @@
     "d5d59bc5-daa6-465b-9491-c16f3c031d42",
     "a3748ab0-1fe3-4bb9-8bed-f87c54ac9c1d",
     "32cabfe6-faa7-44a2-b040-0a63b0412ff5",
+    "9c562bca-8246-4069-b9fe-c2802db7f32c",
     "image_banner",
     "rich_text",
     "featured_collection",
