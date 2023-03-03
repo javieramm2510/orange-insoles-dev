@@ -9,11 +9,11 @@
     assign video = section.settings.video
 %}
 
-<div class="mx-5 mb-10 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 dl:px-0">
-    <div class="flex flex-col items-center text-center mb-28">
-        <h2 class="font-bold text-[60px] mb-4"><span style="color:{{ h1_color }};">{{ headline1 }}</span> <span style="color:{{ h2_color }};">{{ headline2 }}</span></h2>
-        <div class="text-[24px] text-[#4E4E4E] max-w-[480px] mb-8">{{ sub }}</div>
-        <a href="{{ url }}" title="{{ url.title }}" class="font-bold text-[22px] text-[#E68A3F]">{{ button }} →</a>
+<div class="mx-5 mb-20 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 ds:mb-40 dl:px-0">
+    <div class="flex flex-col items-center text-center mb-14 ds:mb-28">
+        <h2 class="font-bold text-[30px] mb-4 ts:text-[45px] ds:text-[60px]"><span style="color:{{ h1_color }};">{{ headline1 }}</span> <span style="color:{{ h2_color }};">{{ headline2 }}</span></h2>
+        <div class="text-[12px] text-[#4E4E4E] max-w-[480px] mb-8 ts:text-[18px] ds:text-[24px]">{{ sub }}</div>
+        <a href="{{ url }}" title="{{ url.title }}" class="font-bold text-[14px] text-[#E68A3F] ts:text-[18px] ds:text-[22px]">{{ button }} →</a>
     </div>
     <video class="rounded-cl w-full" alt="{{ video.alt }}" autoplay muted>
         <source src="{{ video }}" type="video/mp4">
