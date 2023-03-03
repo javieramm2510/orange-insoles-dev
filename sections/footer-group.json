@@ -4,30 +4,35 @@
   "sections": {
     "trustpilot": {
       "type": "swp-reviews-trustpilot-main",
+      "disabled": true,
       "settings": {
+        "trustpilot_heading": "People Love Our Insoles!",
+        "heading_size": "h1",
+        "padding_top": 40,
         "padding_bottom": 40,
-        "padding_top": 40
+        "full_width": false
       }
     },
     "newsletter": {
       "type": "newsletter",
-      "settings": {
-        "color_scheme": "background-2"
-      },
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Get the latest Orange Insights!"
+            "heading": "Get the latest Orange Insights!",
+            "heading_size": "h1"
           }
-        },
-        "email_form": {
-          "type": "email_form"
         },
         "paragraph": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>25,889 people trust our content to help them Feel Better & Do More!</p>"
+            "text": "<p>25,889 people trust our content to help them Feel Better & Do More!<\/p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {
           }
         }
       },
@@ -35,10 +40,17 @@
         "heading",
         "paragraph",
         "email_form"
-      ]
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     },
     "footer": {
       "type": "footer",
+      "disabled": true,
       "blocks": {
         "footer-0": {
           "type": "link_list",
@@ -70,6 +82,8 @@
       "settings": {
         "color_scheme": "accent-1",
         "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
