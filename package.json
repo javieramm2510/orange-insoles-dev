@@ -4,5 +4,8 @@
   },
   "scripts": {
     "tail": "npx tailwindcss -i ./src/css/app.css -o ./assets/theme.css --watch"
+  },
+  "dependencies": {
+    "swiper": "^9.1.0"
   }
 }
