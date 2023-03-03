@@ -8,18 +8,18 @@
         <h2 class="font-bold text-[30px] text-[#272727] max-w-[700px] mb-4 ts:text-[45px] ds:text-[60px]">{{ title }}</h2>
         <div class="text-[12px] text-[#4E4E4E] max-w-[480px] ts:text-[18px] ds:text-[24px]">{{ sub }}</div>
     </div>
-    <div class="grid gap-4 ts:grid-cols-2 ts:grid-rows-2 ts:gap-6 ds:grid-cols-4 ds:grid-rows-1 ds:gap-8">
+    <div class="grid gap-4 mm:grid-cols-2 mm:grid-rows-2 mm:gap-6 ds:grid-cols-4 ds:grid-rows-1 ds:gap-8">
         {% for block in section.blocks %}
             {% liquid  
                 assign image = block.settings.image
                 assign name = block.settings.name
                 assign occupation = block.settings.occupation
             %}
-            <div class="flex flex-col relative rounded-3xl h-[430px]">
+            <div class="flex flex-col relative rounded-3xl h-[400px] mm:h-[500px] ds:h-[430px]">
                 <img class="object-cover rounded-3xl w-full h-full" src="{{ image | image_url }}" title="{{ image.title }}" alt="{{ image.alt }}" loading="lazy">
-                <div class="flex flex-col justify-between absolute bottom-0 text-white bg-[#E68A3F] rounded-3xl w-full h-[88px] p-[20px]">
-                    <h3 class="font-medium text-[30px] text-white ts:text-[30px] ds:text-[30px]">{{ name }}</h3></a>
-                    <p class="text-[17px] text-white ts:text-[17px] ds:text-[17px]">{{ occupation }}</p>
+                <div class="flex flex-col justify-between absolute bottom-0 text-white bg-[#E68A3F] rounded-3xl w-full h-[88px] px-[20px] py-[12px]">
+                    <h3 class="font-medium text-[20px] text-white mm:text-[30px]">{{ name }}</h3></a>
+                    <p class="text-[14px] text-white mm:text-[17px]">{{ occupation }}</p>
                 </div>
             </div>
         {% endfor %}

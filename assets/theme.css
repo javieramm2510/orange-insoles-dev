@@ -706,6 +706,10 @@ video {
   height: 430px;
 }
 
+.h-\[400px\] {
+  height: 400px;
+}
+
 .max-h-\[40px\] {
   max-height: 40px;
 }
@@ -847,6 +851,16 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.px-\[20px\] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.py-\[12px\] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -889,6 +903,10 @@ video {
 
 .text-\[17px\] {
   font-size: 17px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .font-bold {
@@ -955,6 +973,32 @@ video {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+@media (min-width: 480px) {
+  .mm\:h-\[500px\] {
+    height: 500px;
+  }
+
+  .mm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mm\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .mm\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .mm\:text-\[17px\] {
+    font-size: 17px;
+  }
+
+  .mm\:text-\[30px\] {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1119,6 +1163,10 @@ video {
 
   .ds\:h-\[600px\] {
     height: 600px;
+  }
+
+  .ds\:h-\[430px\] {
+    height: 430px;
   }
 
   .ds\:max-h-\[40px\] {
