@@ -2,8 +2,364 @@
     assign nav_menu = linklists[section.settings.nav_menu.handle]
 %}
 
-<div>
-    <div class="text-text bg-black shadow-sp mb-10">
+<div id="header">
+    {% comment %} <div id="mobile-header"class="text-text bg-white shadow-sp pt-2 pb-4 mb-10 ds:hidden">
+        <div class="mx-5">
+            <div class="flex justify-around mb-4">
+                <a class="flex items-center gap-2" href="{{ custom_url_1 }}">
+                    <div class="flex items-center h-6">
+                        {% render 'icons', icon: 'delivery' %}
+                    </div>
+                    <p class="text-xs text-primary font-semibold mm:text-base">{{ custom_text_1 }}</p>
+                </a>
+                <a class="flex items-center gap-2" href="{{ custom_url_2 }}">
+                    <div class="flex items-center h-6">
+                        {% render 'icons', icon: 'phone' %}
+                    </div>
+                    <p class="text-xs text-primary font-semibold mm:text-base">{{ custom_text_2 }}</p>
+                </a>
+            </div>
+            <div class="flex justify-between items-center text">
+                <div class="w-1/6 h-6">
+                    <button onclick="myFunctionMenu('myDropdown_mob')" class="block">{% render 'icons', icon: 'menu' %}</button>
+                    <div id="ext_div" onclick="myFunctionMenu('myDropdown_mob')" class="block fixed -left-0 top-0 z-40 transition-all duration-300 ease-in-out invisible opacity-0 w-screen h-screen backdrop-blur-[2px] bg-gray-600/50"></div>
+                    <div id="myDropdown_mob" class="block fixed -left-0 top-0 z-50 transition-all duration-300 ease-in-out invisible opacity-0 w-max h-screen">
+                        <div id="int_div" class="flex flex-col absolute -left-[480px] overflow-auto transition-all duration-600 ease-in-out bg-white rounded-br-cl w-screen max-w-screen-mm h-screen m-auto">
+                            {% if nav_menu != blank %}
+                                <div class="flex justify-center items-center grow-0 relative py-4 mx-4 border-b border-b-secondary">
+                                    <button onclick="myFunctionMenu('myDropdown_mob')" class="absolute left-0 top-5">{% render 'icons', icon: 'big-delete' %}</button>
+                                    <a href="{{ logo_url }}">{% render 'icons', icon: 'logo' %}</a>
+                                </div>
+                                <ul class="flex flex-col gap-4 grow p-4">
+                                    {% for link in nav_menu.links %}
+                                        <li>
+                                            <div class="flex items-center gap-2 text-xl w-full">
+                                                <a {% if link.url == '#' %}onclick="myFunctionGrid('{{ link.handle }}{{ forloop.index }}')"{% endif %} href="{{ link.url }}" title="{{ link.title }}" class="grow-0">
+                                                    {{ link.title | remove: "image" }}
+                                                </a>
+                                                {% if link.links.size > 0 %}
+                                                    {% if link.title contains 'image' %}
+                                                        <div onclick="myFunctionGrid('{{ link.handle }}{{ forloop.index }}')" class="flex justify-end grow">
+                                                            <span  class="-rotate-90">{% render 'icons', icon: 'blue-down' %}</span>
+                                                        </div> 
+                                                    {% else %}
+                                                        <div onclick="myFunctionGrid('{{ link.handle }}{{ forloop.index }}')" class="flex justify-end items-center grow">
+                                                            <span class="-rotate-90">{% render 'icons', icon: 'blue-down' %}</span>
+                                                        </div>  
+                                                    {% endif %}
+                                                {% endif %}
+                                            </div>
+                                            {% if link.links.size > 0 %}
+                                                {% if link.title contains 'image' %}
+                                                    <div id="{{ link.handle }}{{ forloop.index }}" class="flex flex-col fixed top-0 -left-[480px] z-[60] overflow-auto transition-all duration-600 ease-in-out invisible bg-white rounded-br-cl w-screen max-w-screen-mm h-screen m-auto">
+                                                        <div class="flex justify-center items-center grow-0 relative py-4 mx-4 border-b border-b-secondary">
+                                                            <button onclick="myFunctionGrid('{{ link.handle }}{{ forloop.index }}')" class="absolute left-0 top-6 rotate-90">{% render 'icons', icon: 'big-blue-down' %}</button>
+                                                            <a {% if link.url == '#' %}onclick="myFunctionGrid('{{ link.handle }}{{ forloop.index }}')"{% endif %} href="{{ link.url }}" class="font-bold text-2xl text-center w-4/5">{{ link.title | remove: 'image' }}</a>
+                                                        </div>
+                                                        <ul class="flex flex-col gap-4 grow p-4">
+                                                            {% for sublink in link.links %}
+                                                                {% if sublink.links.size == 0 and sublink.type == 'collection_link' %}
+                                                                    <li>
+                                                                        <div class="flex items-center gap-2 bg-white shadow-mp rounded-cl w-max max-w-full px-2 py-2 mm:gap-4 mm:w-3/4 mm:max-w-none mm:px-5">
+                                                                            <a href="{{ sublink.url }}" title="{{ sublink.title }}"><img src="{{ sublink.object.featured_image | image_url: width: 200 }}" alt="{{ sublink.object.featured_image.alt }}" class="object-cover object-center aspect-square rounded-cl w-[120px]" loading="lazy"></a>
+                                                                            <div class="flex flex-col justify-evenly gap-2">
+                                                                                <a href="{{ sublink.url }}" title="{{ sublink.title }}" class="self-center font-bold text-2xl mb-3">{{ sublink.title }}</a>
+                                                                                <a href="{{ sublink.url }}" title="{{ sublink.title }}" class="button text-sm">Shop {{ sublink.title }}</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                {% else %}
+                                                                    {% if sublink.links.size == 0 %}
+                                                                        <li><a href="{{ sublink.url }}" title="{{ sublink.url }}" class="text-xl">{{ sublink.title }}</a></li>
+                                                                    {% else %}
+                                                                        <li>
+                                                                            <div class="flex items-center justify-between gap-2 text-xl w-full">
+                                                                                <a {% if sublink.url == '#' %}onclick="myFunctionGrid('{{ sublink.handle }}{{ forloop.index }}')"{% endif %} href="{{ sublink.url }}" title="{{ sublink.url }}" class="grow-0">{{ sublink.title }}</a>
+                                                                                <div onclick="myFunctionGrid('{{ sublink.handle }}{{ forloop.index }}')" class="flex justify-end items-center grow"><span class="-rotate-90">{% render 'icons', icon: 'blue-down' %}</span></div>
+                                                                            </div>
+                                                                            <div id="{{ sublink.handle }}{{ forloop.index }}" class="flex flex-col fixed top-0 -left-[480px] z-[70] overflow-auto transition-all duration-600 ease-in-out invisible bg-white rounded-br-cl w-screen max-w-screen-mm h-screen m-auto">
+                                                                                <div class="flex justify-center items-center grow-0 relative py-4 mx-4 border-b border-b-secondary">
+                                                                                    <button onclick="myFunctionGrid('{{ sublink.handle }}{{ forloop.index }}')" class="absolute left-0 top-6 rotate-90">{% render 'icons', icon: 'big-blue-down' %}</button>
+                                                                                    <a {% if sublink.url == '#' %}onclick="myFunctionGrid('{{ sublink.handle }}{{ forloop.index }}')"{% endif %} href="{{ sublink.url }}" class="font-bold text-2xl text-center w-4/5">{{ sublink.title }}</a>
+                                                                                </div>
+                                                                                <ul class="flex flex-col gap-4 grow p-4">
+                                                                                {% for item in sublink.links %}
+                                                                                    <li><a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>                  
+                                                                                {% endfor %}
+                                                                                </ul>
+                                                                                {% if ex_section %}
+                                                                                <div class="flex flex-col gap-2 grow-0 bg-body rounded-br-cl p-4">
+                                                                                    {% if ex_text1 != blank %}<a href="{{ ex_url1 }}" title="{{ ex_url1.title }}" class="flex items-center gap-1">
+                                                                                        <img src="{{ svg1 }}" alt="{{ svg1.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                        <span>{{ ex_text1 }}</span>
+                                                                                    </a>{% endif %}
+                                                                                    {% if ex_text2 != blank %}<a href="{{ ex_url2 }}" title="{{ ex_url2.title }}" class="flex items-center gap-1">
+                                                                                        <img src="{{ svg2 }}" alt="{{ svg2.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                        <span>{{ ex_text2 }}</span>
+                                                                                    </a>{% endif %}
+                                                                                    {% if ex_text3 != blank %}<a href="{{ ex_url3 }}" title="{{ ex_url3.title }}" class="flex items-center gap-1">
+                                                                                        <img src="{{ svg3 }}" alt="{{ svg3.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                        <span>{{ ex_text3 }}</span>
+                                                                                    </a>{% endif %}
+                                                                                    {% if ex_text4 != blank %}<a href="{{ ex_url4 }}" title="{{ ex_url4.title }}" class="flex items-center gap-1">
+                                                                                        <img src="{{ svg4 }}" alt="{{ svg4.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                        <span>{{ ex_text4 }}</span>
+                                                                                    </a>{% endif %}
+                                                                                    {% if ex_text5 != blank %}<a href="{{ ex_url5 }}" title="{{ ex_url5.title }}" class="flex items-center gap-1">
+                                                                                        <img src="{{ svg5 }}" alt="{{ svg5.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                        <span>{{ ex_text5 }}</span>
+                                                                                    </a>{% endif %}
+                                                                                </div>
+                                                                                {% endif %}
+                                                                            </div>
+                                                                        </li>
+                                                                    {% endif %}
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        </ul>
+                                                        {% if ex_section %}
+                                                        <div class="flex flex-col gap-2 grow-0 bg-body rounded-br-cl p-4">
+                                                            {% if ex_text1 != blank %}<a href="{{ ex_url1 }}" title="{{ ex_url1.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg1 }}" alt="{{ svg1.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text1 }}</span>
+                                                            </a>{% endif %}
+                                                            {% if ex_text2 != blank %}<a href="{{ ex_url2 }}" title="{{ ex_url2.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg2 }}" alt="{{ svg2.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text2 }}</span>
+                                                            </a>{% endif %}
+                                                            {% if ex_text3 != blank %}<a href="{{ ex_url3 }}" title="{{ ex_url3.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg3 }}" alt="{{ svg3.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text3 }}</span>
+                                                            </a>{% endif %}
+                                                            {% if ex_text4 != blank %}<a href="{{ ex_url4 }}" title="{{ ex_url4.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg4 }}" alt="{{ svg4.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text4 }}</span>
+                                                            </a>{% endif %}
+                                                            {% if ex_text5 != blank %}<a href="{{ ex_url5 }}" title="{{ ex_url5.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg5 }}" alt="{{ svg5.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text5 }}</span>
+                                                            </a>{% endif %}
+                                                        </div>
+                                                        {% endif %}
+                                                    </div>
+                                                {% else %}
+                                                    <div id="{{ link.handle }}{{ forloop.index }}" class="flex flex-col fixed top-0 -left-[480px] z-[60] overflow-auto transition-all duration-600 ease-in-out invisible bg-white rounded-br-cl w-screen max-w-screen-mm h-screen m-auto">
+                                                        <div class="flex justify-center items-center grow-0 relative py-4 mx-4 border-b border-b-secondary">
+                                                            <button onclick="myFunctionGrid('{{ link.handle }}{{ forloop.index }}')" class="absolute left-0 top-6 rotate-90">{% render 'icons', icon: 'big-blue-down' %}</button>
+                                                            <a {% if link.url == '#' %}onclick="myFunctionGrid('{{ link.handle }}{{ forloop.index }}')"{% endif %} href="{{ link.url }}" class="font-bold text-2xl text-center w-4/5">{{ link.title }}</a>
+                                                        </div>
+                                                        <ul class="flex flex-col gap-4 grow p-4">
+                                                            {% for sublink in link.links %}
+                                                                {% if sublink.links.size == 0 %}
+                                                                    <li><a href="{{ sublink.url }}" title="{{ sublink.title }}" class="text-xl">{{ sublink.title }}</a></li>
+                                                                {% else %}
+                                                                    <li>
+                                                                        <div class="flex items-center justify-between gap-2 text-xl w-full">
+                                                                            <a {% if sublink.url == '#' %}onclick="myFunctionGrid('{{ sublink.handle }}{{ forloop.index }}')"{% endif %} href="{{ sublink.url }}" title="{{ sublink.url }}" class="grow-0">{{ sublink.title }}</a>
+                                                                            <div onclick="myFunctionGrid('{{ sublink.handle }}{{ forloop.index }}')" class="flex justify-end items-center grow"><span class="-rotate-90">{% render 'icons', icon: 'blue-down' %}</span></div>
+                                                                        </div>
+                                                                        <div id="{{ sublink.handle }}{{ forloop.index }}" class="flex flex-col fixed top-0 -left-[480px] z-[70] overflow-auto transition-all duration-600 ease-in-out invisible bg-white rounded-br-cl w-screen max-w-screen-mm h-screen m-auto">
+                                                                            <div class="flex justify-center items-center grow-0 relative py-4 mx-4 border-b border-b-secondary">
+                                                                                <button onclick="myFunctionGrid('{{ sublink.handle }}{{ forloop.index }}')" class="absolute left-0 top-6 rotate-90">{% render 'icons', icon: 'big-blue-down' %}</button>
+                                                                                <a {% if sublink.url == '#' %}onclick="myFunctionGrid('{{ sublink.handle }}{{ forloop.index }}')"{% endif %} href="{{ sublink.url }}" class="font-bold text-2xl text-center w-4/5">{{ sublink.title }}</a>
+                                                                            </div>
+                                                                            <ul class="flex flex-col gap-4 grow p-4">
+                                                                            {% for item in sublink.links %}
+                                                                                <li><a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>                   
+                                                                            {% endfor %}
+                                                                            </ul>
+                                                                            {% if ex_section %}
+                                                                            <div class="flex flex-col gap-2 grow-0 bg-body rounded-br-cl p-4">
+                                                                                {% if ex_text1 != blank %}<a href="{{ ex_url1 }}" title="{{ ex_url1.title }}" class="flex items-center gap-1">
+                                                                                    <img src="{{ svg1 }}" alt="{{ svg1.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                    <span>{{ ex_text1 }}</span>
+                                                                                </a>{% endif %}
+                                                                                {% if ex_text2 != blank %}<a href="{{ ex_url2 }}" title="{{ ex_url2.title }}" class="flex items-center gap-1">
+                                                                                    <img src="{{ svg2 }}" alt="{{ svg2.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                    <span>{{ ex_text2 }}</span>
+                                                                                </a>{% endif %}
+                                                                                {% if ex_text3 != blank %}<a href="{{ ex_url3 }}" title="{{ ex_url3.title }}" class="flex items-center gap-1">
+                                                                                    <img src="{{ svg3 }}" alt="{{ svg3.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                    <span>{{ ex_text3 }}</span>
+                                                                                </a>{% endif %}
+                                                                                {% if ex_text4 != blank %}<a href="{{ ex_url4 }}" title="{{ ex_url4.title }}" class="flex items-center gap-1">
+                                                                                    <img src="{{ svg4 }}" alt="{{ svg4.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                    <span>{{ ex_text4 }}</span>
+                                                                                </a>{% endif %}
+                                                                                {% if ex_text5 != blank %}<a href="{{ ex_url5 }}" title="{{ ex_url5.title }}" class="flex items-center gap-1">
+                                                                                    <img src="{{ svg5 }}" alt="{{ svg5.alt }}" loading="lazy" class="w-6 h-6">
+                                                                                    <span>{{ ex_text5 }}</span>
+                                                                                </a>{% endif %}
+                                                                            </div>
+                                                                            {% endif %}
+                                                                        </div>
+                                                                    </li>
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        </ul>
+                                                        {% if ex_section %}
+                                                        <div class="flex flex-col gap-2 grow-0 bg-body rounded-br-cl p-4">
+                                                            {% if ex_text1 != blank %}<a href="{{ ex_url1 }}" title="{{ ex_url1.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg1 }}" alt="{{ svg1.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text1 }}</span>
+                                                            </a>{% endif %}
+                                                            {% if ex_text2 != blank %}<a href="{{ ex_url2 }}" title="{{ ex_url2.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg2 }}" alt="{{ svg2.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text2 }}</span>
+                                                            </a>{% endif %}
+                                                            {% if ex_text3 != blank %}<a href="{{ ex_url3 }}" title="{{ ex_url3.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg3 }}" alt="{{ svg3.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text3 }}</span>
+                                                            </a>{% endif %}
+                                                            {% if ex_text4 != blank %}<a href="{{ ex_url4 }}" title="{{ ex_url4.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg4 }}" alt="{{ svg4.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text4 }}</span>
+                                                            </a>{% endif %}
+                                                            {% if ex_text5 != blank %}<a href="{{ ex_url5 }}" title="{{ ex_url5.title }}" class="flex items-center gap-1">
+                                                                <img src="{{ svg5 }}" alt="{{ svg5.alt }}" loading="lazy" class="w-6 h-6">
+                                                                <span>{{ ex_text5 }}</span>
+                                                            </a>{% endif %}
+                                                        </div>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                            {% endif %}
+                                        </li>                    
+                                    {% endfor %}
+                                </ul>
+                                <div>
+                                    <a href="{{ button_url }}" title="{{ button_url.title }}" class="button-accent w-max m-4">{{ button_label }}</a>
+                                </div>
+                                <div class="text-text appearance-none border border-text rounded-full focus:border-secondary focus:outline-none w-max mx-4 mb-4">
+                                    <div class="transcy-switcher-manual transcy-mobile hidden"></div>
+                                </div>
+                                {% if ex_section %}
+                                <div class="flex flex-col gap-2 grow-0 bg-body rounded-br-cl p-4">
+                                    {% if ex_text1 != blank %}<a href="{{ ex_url1 }}" title="{{ ex_url1.title }}" class="flex items-center gap-1">
+                                        <img src="{{ svg1 }}" alt="{{ svg1.alt }}" loading="lazy" class="w-6 h-6">
+                                        <span>{{ ex_text1 }}</span>
+                                    </a>{% endif %}
+                                    {% if ex_text2 != blank %}<a href="{{ ex_url2 }}" title="{{ ex_url2.title }}" class="flex items-center gap-1">
+                                        <img src="{{ svg2 }}" alt="{{ svg2.alt }}" loading="lazy" class="w-6 h-6">
+                                        <span>{{ ex_text2 }}</span>
+                                    </a>{% endif %}
+                                    {% if ex_text3 != blank %}<a href="{{ ex_url3 }}" title="{{ ex_url3.title }}" class="flex items-center gap-1">
+                                        <img src="{{ svg3 }}" alt="{{ svg3.alt }}" loading="lazy" class="w-6 h-6">
+                                        <span>{{ ex_text3 }}</span>
+                                    </a>{% endif %}
+                                    {% if ex_text4 != blank %}<a href="{{ ex_url4 }}" title="{{ ex_url4.title }}" class="flex items-center gap-1">
+                                        <img src="{{ svg4 }}" alt="{{ svg4.alt }}" loading="lazy" class="w-6 h-6">
+                                        <span>{{ ex_text4 }}</span>
+                                    </a>{% endif %}
+                                    {% if ex_text5 != blank %}<a href="{{ ex_url5 }}" title="{{ ex_url5.title }}" class="flex items-center gap-1">
+                                        <img src="{{ svg5 }}" alt="{{ svg5.alt }}" loading="lazy" class="w-6 h-6">
+                                        <span>{{ ex_text5 }}</span>
+                                    </a>{% endif %}
+                                </div>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                    <a href="{{ logo_url }}">
+                        {% render 'icons', icon: 'logo' %}
+                    </a>
+                <div class="flex justify-end gap-1 w-1/6 mm:gap-2">
+                    <div onclick="myFunctionSearch('searchdrop')" class="h-6">
+                        {% render 'icons', icon: 'search' %}
+                    </div>
+                    <div id="ext_search" onclick="myFunctionSearch('searchdrop')" class="absolute z-40 top-0 right-0 transition-all duration-300 ease-in-out invisible opacity-0 backdrop-blur-[2px] bg-gray-600/50 w-screen h-screen">
+                    </div>
+                    <div id="searchdrop" class="flex justify-center absolute z-50 top-0 right-0 transition-all duration-300 ease-in-out invisible opacity-0 w-screen h-max">
+                        <div id="main-search-container-mobile" class="relative top-6 w-full max-w-[715px] mx-5 dm:mx-auto ds:mx-9">
+                            <div class="flex gap-1">
+                                <div onclick="myFunctionSearch('searchdrop')" title="Close" class="cursor-pointer bg-primary shadow-sp rounded-full p-2">{% render 'icons', icon: 'white-delete' %}</div>
+                                <input v-model="searchTerm" @keyup="searchBar()" @keyup.enter="searchPage()" id="search-bar-mobile" class="outline-none border-none rounded-full focus:border-secondary focus:outline-none w-full py-[5px] pl-4 pr-8" type="text" placeholder="Type to search" autocomplete="off">
+                                <button @click="searchPage()" class="flex items-center absolute top-1 right-0 pr-4" title="search"> 
+                                    {% render 'icons', icon: 'search' %}
+                                </button>
+                            </div>
+                            <template v-if="showSearch == true && searchTerm != '' && resultsCount != 0">
+                                <div id="search-container-mobile" class="flex flex-col gap-2 absolute z-10 top-12 bg-white rounded-cl shadow-sp p-3 mm:p-4">
+                                    <template v-if="products.length > 0 && products[0] != undefined">
+                                        <div id="productsResults">
+                                            <h3 class="font-bold text-center mb-2">Products</h3>
+                                            <div class="grid grid-cols-2 gap-2">
+                                                <template v-for="(product, index) in products">
+                                                <a class="flex items-center gap-2" :href="product.url" :title="product.title">
+                                                    <img class="object-cover rounded-cs w-16 h-16" :src="product.featured_image.url" :alt="product.featured_image.alt" loading="lazy">
+                                                    <div class="flex flex-col">
+                                                        <p class="line-clamp-2 font-semibold text-xs">${ product.title }</p>
+                                                        <p class="text-xs">${ product.vendor }</p>
+                                                        <p class="text-xs"><span>${ product.price }</span></p>
+                                                    </div>   
+                                                </a>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <template v-if="articles.length > 0 && articles[0] != undefined">
+                                        <div id="articlesResults">
+                                            <h3 class="font-bold text-center mb-2">Articles</h3>
+                                            <div class="grid grid-cols-2 gap-2">
+                                                <template v-for="(article, index) in articles">
+                                                <a class="flex items-center gap-2" :href="article.url" :title="article.title">
+                                                    <img class="object-cover rounded-cs w-16 h-16" :src="article.featured_image.url" :alt="article.featured_image.alt" loading="lazy">
+                                                    <p class="line-clamp-3 font-semibold text-xs">${ article.title }</p> 
+                                                </a>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <template v-if="collections.length > 0 && collections[0] != undefined">
+                                        <div id="collectionsResults">
+                                            <h3 class="font-bold text-center mb-2">Collections</h3>
+                                            <div class="flex flex-wrap justify-center gap-2">
+                                                <template v-for="(collection, index) in collections">
+                                                <a class="font-semibold text-xs text-white bg-primary rounded-full py-1 px-3" :href="collection.url" :title="collection.title">${ collection.title }</a>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <template v-if="pages.length > 0 && pages[0] != undefined">
+                                        <div id="pagesResults">
+                                            <h3 class="font-bold text-center mb-2">Pages</h3>
+                                            <div class="flex flex-wrap justify-center gap-2">
+                                                <template v-for="(page, index) in pages">
+                                                <a class="font-semibold text-xs text-white bg-primary rounded-full py-1 px-3" :href="page.url" :title="page.title">${ page.title }</a>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </template>
+                            <template v-else-if="showSearch == true && searchTerm != '' && resultsCount != 0 &&  collections[0].title == 'Flash Sale'">
+                                <div id="search-container-mobile" class="absolute z-10 left-9 top-12 bg-white rounded-cl shadow-sp p-4">
+                                    <p>Sorry, nothing found for "${ searchTerm }".</p>
+                                </div>
+                            </template>
+                            <template v-else-if="showSearch == true && searchTerm != '' && resultsCount == 0">
+                                <div id="search-container-mobile" class="absolute z-10 left-9 top-12 bg-white rounded-cl shadow-sp p-4">
+                                    <p>Sorry, nothing found for "${ searchTerm }".</p>
+                                </div>
+                            </template>
+                            <template v-else-if="showSearch == true && searchTerm == ''">
+                                <div id="search-container-mobile" class="absolute z-10 left-9 top-12 bg-white rounded-cl shadow-sp p-4">
+                                    <p>Type to search Products, Articles, Collections and pages.</p>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <a class="relative h-6" href="/cart">
+                        <span id="cart-counter-mb" class="absolute -top-2 -right-1 bg-secondary rounded-full py-0.5 px-1.5 text-xs text-white">${ cartCount }</span>
+                        {% render 'icons', icon: 'cart' %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> {% endcomment %}
+    
+    <div id="desk-header" class="hidden text-text bg-white shadow-sp mb-10 ds:block">
         <div class="flex justify-between items-center pt-5 pb-4 ds:mx-9 dm:mx-auto dm:max-w-screen-dm dm:px-10 dl:px-4">
             <div class="relative p-4 m-auto dm:max-w-screen-dm">
                 {% if nav_menu != blank %}
@@ -79,6 +435,75 @@
         </div>
     </div>
 </div>
+
+
+{% comment %} <script>
+    function myFunctionGrid(id) {
+        var x = document.getElementById(id);
+        if (x.classList.contains('invisible')) {
+            x.classList.remove('invisible');
+            x.classList.add('visible');
+            x.classList.remove('-left-[480px]');
+            x.classList.add('-left-0');
+        } else {
+            x.classList.remove('visible');
+            x.classList.add('invisible');
+            x.classList.remove('-left-0');
+            x.classList.add('-left-[480px]');
+        }
+    }
+    function myFunctionSearch(id) {
+        var x = document.getElementById(id);
+        const y = document.getElementById('ext_search');
+        if (x.classList.contains('invisible')) {
+            x.classList.remove('invisible');
+            x.classList.add('visible');
+            x.classList.remove('opacity-0');
+            x.classList.add('opacity-100');
+            y.classList.remove('invisible');
+            y.classList.add('visible');
+            y.classList.remove('opacity-0');
+            y.classList.add('opacity-100');
+        } else {
+            x.classList.remove('visible');
+            x.classList.add('invisible');
+            x.classList.remove('opacity-100');
+            x.classList.add('opacity-0');
+            y.classList.remove('visible');
+            y.classList.add('invisible');
+            y.classList.remove('opacity-100');
+            y.classList.add('opacity-0');
+        }
+    }  
+    function myFunctionMenu(id) {
+        var x = document.getElementById(id);
+        const y = document.getElementById('int_div');
+        const z = document.getElementById('ext_div');
+        if (x.classList.contains('invisible')) {
+            x.classList.remove('invisible');
+            x.classList.add('visible');
+            x.classList.remove('opacity-0');
+            x.classList.add('opacity-100');
+            y.classList.remove('-left-[480px]');
+            y.classList.add('-left-0');
+            z.classList.remove('invisible');
+            z.classList.add('visible');
+            z.classList.remove('opacity-0');
+            z.classList.add('opacity-100');
+        } else {
+            x.classList.remove('visible');
+            x.classList.add('invisible');
+            x.classList.remove('opacity-100');
+            x.classList.add('opacity-0');
+            y.classList.remove('-left-0');
+            y.classList.add('-left-[480px]');
+            z.classList.remove('visible');
+            z.classList.add('invisible');
+            z.classList.remove('opacity-100');
+            z.classList.add('opacity-0');
+        }
+    }
+</script> {% endcomment %}
 
 
 {% schema %}
