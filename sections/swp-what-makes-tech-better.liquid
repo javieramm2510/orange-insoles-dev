@@ -1,24 +1,16 @@
 {% liquid 
-    assign headline1 = section.settings.headline1
-    assign h1_color = section.settings.h1_color
-    assign headline2 = section.settings.headline2
-    assign h2_color = section.settings.h2_color
+    assign align = section.settings.text_align
+    assign title = section.settings.title
     assign sub = section.settings.sub
-    assign button = section.settings.button
-    assign url = section.settings.button_url
-    assign video = section.settings.video
+    assign image = section.settings.image
 %}
 
 <div class="mx-5 mb-20 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 ds:mb-40 dl:px-0">
     <div class="flex flex-col items-center text-center mb-14 ds:mb-28">
-        <h2 class="font-bold text-[30px] mb-4 ts:text-[45px] ds:text-[60px]"><span style="color:{{ h1_color }};">{{ headline1 }}</span> <span style="color:{{ h2_color }};">{{ headline2 }}</span></h2>
-        <div class="text-[12px] text-[#4E4E4E] max-w-[480px] mb-8 ts:text-[18px] ds:text-[24px]">{{ sub }}</div>
-        <a href="{{ url }}" title="{{ url.title }}" class="font-bold text-[14px] text-[#E68A3F] ts:text-[18px] ds:text-[22px]">{{ button }} →</a>
+        <h2 class="font-bold text-[30px] text-{{ align }} text-[#272727] max-w-[480px] mb-4 ts:text-[45px] ds:text-[60px]">{{ title }}</h2>
+        <div class="text-[12px] text-{{ align }} text-[#4E4E4E] max-w-[480px] ts:text-[18px] ds:text-[24px]">{{ sub }}</div>
     </div>
-    <video class="rounded-cl w-full" alt="{{ video.alt }}" autoplay muted>
-        <source src="{{ video }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <img class="w-full" src="{{ image | image_url }}" alt="{{ image.alt }}" title="{{ image.title}}">
 </div>
 
 
@@ -27,46 +19,39 @@
     "name": "What Makes Tech Better",
     "settings": [
         {
+            "type": "select",
+            "id": "text_align",
+            "label": "Text Alignment",
+            "options": [
+                {
+                "value": "left",
+                "label": "Left"
+                },
+                {
+                "value": "center",
+                "label": "Center"
+                },
+                {
+                "value": "right",
+                "label": "Right"
+                }
+            ],
+            "default": "left"
+        },
+        {
             "type": "text",
-            "id": "headline1",
-            "label": "Headline 1 Text"
-        },
-        {
-            "type": "color",
-            "id": "h1_color",
-            "label": "Headline 1 Color",
-            "default": "#272727"
-        },
-        {
-            "type": "text",
-            "id": "headline2",
-            "label": "Headline 2 Text"
-        },
-        {
-            "type": "color",
-            "id": "h2_color",
-            "label": "Headline 2 Color",
-            "default": "#E68A3F"
+            "id": "title",
+            "label": "Title"
         },
         {
             "type": "text",
             "id": "sub",
             "label": "Subheader"
         },
-         {
-            "type": "text",
-            "id": "button",
-            "label": "Link Text"
-        },
         {
-            "type": "url",
-            "id": "button_url",
-            "label": "Link URL"
-        },
-        {
-            "type": "url",
-            "id": "video",
-            "label": "Video URL"
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
         }
     ],
     "presets": [
