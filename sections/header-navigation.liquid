@@ -360,83 +360,87 @@
     </div> {% endcomment %}
     
     <div class="hidden z-10 text-[#272727] bg-white shadow-sp mb-10 ds:block">
-        <div class="flex justify-between items-center pt-5 pb-4 ds:mx-9 dm:mx-auto dm:max-w-screen-dm dm:px-10 dl:px-4">
-            <div class="relative p-4 m-auto dm:max-w-screen-dm">
-                {% if nav_menu != blank %}
-                    <ul class="flex justify-evenly">
-                        {% for link in nav_menu.links %}
-                        {% if forloop.index <= 3 %}
-                            <li>
-                            <div class="group peer">
-                                <a class="flex items-center gap-2 text-xl font-bold" href="{{ link.url }}">
-                                    {{ link.title }}
+        <div class="flex justify-between items-center gap-[20px] divide-x-2 divide-[#BBBBBB] py-[36px] ds:mx-9 dm:mx-auto dm:max-w-screen-dm dm:px-10 dl:px-4">
+            <div class="flex justify-between items-center gap-[64px]">
+                <div class="relative p-4 m-auto dm:max-w-screen-dm">
+                    {% if nav_menu != blank %}
+                        <ul class="flex justify-evenly gap-6">
+                            {% for link in nav_menu.links %}
+                            {% if forloop.index <= 3 %}
+                                <li>
+                                <div class="group peer">
+                                    <a class="flex items-center gap-2 text-[19px] font-medium" href="{{ link.url }}">
+                                        {{ link.title }}
+                                        {% if link.links.size > 0 %}
+                                            <span class="transition-all duration-300 ease-in-out group-hover:rotate-180">{% render 'icons', icon: 'dropdown' %}</span> 
+                                        {% endif %}
+                                    </a>
                                     {% if link.links.size > 0 %}
-                                        <span class="transition-all duration-300 ease-in-out group-hover:rotate-180">{% render 'icons', icon: 'dropdown' %}</span> 
-                                    {% endif %}
-                                </a>
-                                {% if link.links.size > 0 %}
-                                    <div class="absolute z-20 -left-px font-bold transition-all duration-300 ease-in-out invisible opacity-0 group-hover:visible group-hover:opacity-100 shadow-ln rounded-b-3xl overflow-hidden w-[100%]">
-                                        <div class="grid grid-cols-5 gap-10 bg-white rounded-b-3xl py-8 px-20">
-                                            {% for sublink in link.links %}
-                                                <a href="{{ sublink.url }}" title="{{ sublink.title }}"><p class="text-[#272727] text-xl">{{ sublink.title }}</p></a>
-                                            {% endfor %}
+                                        <div class="absolute z-20 -left-px font-bold transition-all duration-300 ease-in-out invisible opacity-0 group-hover:visible group-hover:opacity-100 shadow-ln rounded-b-3xl overflow-hidden w-[100%]">
+                                            <div class="grid grid-cols-5 gap-10 bg-white rounded-b-3xl py-8 px-20">
+                                                {% for sublink in link.links %}
+                                                    <a href="{{ sublink.url }}" title="{{ sublink.title }}"><p class="text-[#272727] text-xl">{{ sublink.title }}</p></a>
+                                                {% endfor %}
+                                            </div>
                                         </div>
-                                    </div>
+                                    {% endif %}
+                                </div>
+                                {% if link.links.size > 0 %}
+                                    <div class="fixed -z-10 top-12 right-0 transition-all duration-300 ease-in-out invisible opacity-0 backdrop-blur-[2px] bg-gray-600/50 peer-hover:visible peer-hover:opacity-100 w-screen h-screen"></div>
                                 {% endif %}
-                            </div>
-                            {% if link.links.size > 0 %}
-                                <div class="fixed -z-10 top-12 right-0 transition-all duration-300 ease-in-out invisible opacity-0 backdrop-blur-[2px] bg-gray-600/50 peer-hover:visible peer-hover:opacity-100 w-screen h-screen"></div>
+                                </li>
                             {% endif %}
-                            </li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </div>
-            <a href="#" title="Orange Insoles">
-                {% render 'icons', icon: 'logo' %}
-            </a>
-            <div class="relative p-4 m-auto dm:max-w-screen-dm">
-                {% if nav_menu != blank %}
-                    <ul class="flex justify-evenly">
-                        {% for link in nav_menu.links %}
-                        {% if forloop.index > 3 %}
-                            <li>
-                            <div class="group peer">
-                                <a class="flex items-center gap-2 text-xl font-bold text-text" href="{{ link.url }}">
-                                    {{ link.title }}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <a href="#" title="Orange Insoles">
+                    {% render 'icons', icon: 'logo' %}
+                </a>
+                <div class="relative p-4 m-auto dm:max-w-screen-dm">
+                    {% if nav_menu != blank %}
+                        <ul class="flex justify-evenly">
+                            {% for link in nav_menu.links %}
+                            {% if forloop.index > 3 %}
+                                <li>
+                                <div class="group peer">
+                                    <a class="flex items-center gap-2 text-xl font-bold text-text" href="{{ link.url }}">
+                                        {{ link.title }}
+                                        {% if link.links.size > 0 %}
+                                            <span class="transition-all duration-300 ease-in-out group-hover:rotate-180">{% render 'icons', icon: 'dropdown' %}</span> 
+                                        {% endif %}
+                                    </a>
                                     {% if link.links.size > 0 %}
-                                        <span class="transition-all duration-300 ease-in-out group-hover:rotate-180">{% render 'icons', icon: 'dropdown' %}</span> 
-                                    {% endif %}
-                                </a>
-                                {% if link.links.size > 0 %}
-                                    <div class="absolute z-20 -left-px font-bold transition-all duration-300 ease-in-out invisible opacity-0 group-hover:visible group-hover:opacity-100 shadow-ln rounded-b-3xl overflow-hidden w-[100%]">
-                                        <div class="grid grid-cols-5 gap-10 bg-white rounded-b-3xl py-8 px-20">
-                                            {% for sublink in link.links %}
-                                                <a href="{{ sublink.url }}" title="{{ sublink.title }}"><p class="text-primary text-xl">{{ sublink.title }}</p></a>
-                                            {% endfor %}
+                                        <div class="absolute z-20 -left-px font-bold transition-all duration-300 ease-in-out invisible opacity-0 group-hover:visible group-hover:opacity-100 shadow-ln rounded-b-3xl overflow-hidden w-[100%]">
+                                            <div class="grid grid-cols-5 gap-10 bg-white rounded-b-3xl py-8 px-20">
+                                                {% for sublink in link.links %}
+                                                    <a href="{{ sublink.url }}" title="{{ sublink.title }}"><p class="text-primary text-xl">{{ sublink.title }}</p></a>
+                                                {% endfor %}
+                                            </div>
                                         </div>
-                                    </div>
+                                    {% endif %}
+                                </div>
+                                {% if link.links.size > 0 %}
+                                    <div class="fixed -z-10 top-12 right-0 transition-all duration-300 ease-in-out invisible opacity-0 backdrop-blur-[2px] bg-gray-600/50 peer-hover:visible peer-hover:opacity-100 w-screen h-screen"></div>
                                 {% endif %}
-                            </div>
-                            {% if link.links.size > 0 %}
-                                <div class="fixed -z-10 top-12 right-0 transition-all duration-300 ease-in-out invisible opacity-0 backdrop-blur-[2px] bg-gray-600/50 peer-hover:visible peer-hover:opacity-100 w-screen h-screen"></div>
+                                </li>
                             {% endif %}
-                            </li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
             </div>
-            <a href="#">
-                {% render 'icons', icon: 'user' %}
-            </a>
-            <a href="#">
-                {% render 'icons', icon: 'cart' %}
-            </a>
-            <a href="#">
-                {% render 'icons', icon: 'burger' %}
-            </a>
+            <div class="flex justify-between items-center gap-[24px] pl-[20px]">
+                <a href="#">
+                    {% render 'icons', icon: 'user' %}
+                </a>
+                <a href="#">
+                    {% render 'icons', icon: 'cart' %}
+                </a>
+                <a href="#">
+                    {% render 'icons', icon: 'burger' %}
+                </a>
+            </div>
         </div>
     </div>
 </div>
