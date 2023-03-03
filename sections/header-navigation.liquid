@@ -359,7 +359,7 @@
         </div>
     </div> {% endcomment %}
     
-    <div id="desk-header" class="hidden z-10 text-text bg-white shadow-sp mb-10 ds:block">
+    <div id="desk-header" class="hidden z-10 text-[#272727] bg-white shadow-sp mb-10 ds:block">
         <div class="flex justify-between items-center pt-5 pb-4 ds:mx-9 dm:mx-auto dm:max-w-screen-dm dm:px-10 dl:px-4">
             <div class="relative p-4 m-auto dm:max-w-screen-dm">
                 {% if nav_menu != blank %}
@@ -368,7 +368,7 @@
                         {% if forloop.index <= 3 %}
                             <li>
                             <div class="group peer">
-                                <a class="flex items-center gap-2 text-xl font-bold text-text" href="{{ link.url }}">
+                                <a class="flex items-center gap-2 text-xl font-bold" href="{{ link.url }}">
                                     {% if link.links.size > 0 %}
                                         <span class="transition-all duration-300 ease-in-out group-hover:rotate-180">{% render 'icons', icon: 'dropdown' %}</span> 
                                     {% endif %}
@@ -377,7 +377,7 @@
                                     <div class="absolute z-20 -left-px font-bold transition-all duration-300 ease-in-out invisible opacity-0 group-hover:visible group-hover:opacity-100 shadow-ln rounded-b-3xl overflow-hidden w-[100%]">
                                         <div class="grid grid-cols-5 gap-10 bg-white rounded-b-3xl py-8 px-20">
                                             {% for sublink in link.links %}
-                                                <a href="{{ sublink.url }}" title="{{ sublink.title }}"><p class="text-primary text-xl">{{ sublink.title }}</p></a>
+                                                <a href="{{ sublink.url }}" title="{{ sublink.title }}"><p class="text-[#272727] text-xl">{{ sublink.title }}</p></a>
                                             {% endfor %}
                                         </div>
                                     </div>
