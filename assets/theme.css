@@ -961,6 +961,10 @@ video {
     height: 450px;
   }
 
+  .ts\:h-\[950px\] {
+    height: 950px;
+  }
+
   .ts\:max-h-\[40px\] {
     max-height: 40px;
   }

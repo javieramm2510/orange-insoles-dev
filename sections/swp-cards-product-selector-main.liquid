@@ -1,5 +1,5 @@
 <div class="mb-32 mx-5 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 dl:px-0">
-    <div class="grid grid-rows-3 gap-4 h-[650px] ts:grid-cols-4 ts:grid-rows-2 ds:grid-cols-5 ds:h-[500px]">
+    <div class="grid grid-rows-3 gap-4 h-[650px] ts:grid-cols-4 ts:grid-rows-2 ts:h-[950px] ds:grid-cols-5 ds:h-[500px]">
         {% for block in section.blocks %}
             {% liquid  
                 assign image = block.settings.product.featured_image
@@ -8,7 +8,7 @@
                 assign url = block.settings.product.url
             %}
             {% if forloop.index == 1 %}
-                <div class="relative bg-black rounded-3xl px-10 py-12 ts:row-span-2 ts:col-span-2 ds:row-span-2 ds:col-span-3">
+                <div class="relative bg-black rounded-3xl px-10 py-12 ts:col-span-2 ds:row-span-2 ds:col-span-3">
                     <div class="absolute z-10 w-8/12 ds:w-1/2">
                         <a href="{{ url }}" title="{{ url.title }}"><h2 class="font-bold text-[50px] text-white">{{ title }}</h2></a>
                         <p class="text-[18px] text-white mb-5">{{ description }}</p>
