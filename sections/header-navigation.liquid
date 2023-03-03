@@ -374,8 +374,8 @@
                                     {% endif %}
                                 </a>
                                 {% if link.links.size > 0 %}
-                                    <div class="absolute z-20 -left-px font-bold transition-all duration-300 ease-in-out invisible opacity-0 group-hover:visible group-hover:opacity-100 shadow-ln rounded-b-cl overflow-hidden w-[100%]">
-                                        <div class="grid grid-cols-5 gap-10 bg-white {% if ex_section == false %}rounded-b-cl{% endif %} py-8 px-20">
+                                    <div class="absolute z-20 -left-px font-bold transition-all duration-300 ease-in-out invisible opacity-0 group-hover:visible group-hover:opacity-100 shadow-ln rounded-b-3xl overflow-hidden w-[100%]">
+                                        <div class="grid grid-cols-5 gap-10 bg-white rounded-b-3xl py-8 px-20">
                                             {% for sublink in link.links %}
                                                 <a href="{{ sublink.url }}" title="{{ sublink.title }}"><p class="text-primary text-xl">{{ sublink.title }}</p></a>
                                             {% endfor %}
@@ -408,8 +408,8 @@
                                     {% endif %}
                                 </a>
                                 {% if link.links.size > 0 %}
-                                    <div class="absolute z-20 -left-px font-bold transition-all duration-300 ease-in-out invisible opacity-0 group-hover:visible group-hover:opacity-100 shadow-ln rounded-b-cl overflow-hidden w-[100%]">
-                                        <div class="grid grid-cols-5 gap-10 bg-white {% if ex_section == false %}rounded-b-cl{% endif %} py-8 px-20">
+                                    <div class="absolute z-20 -left-px font-bold transition-all duration-300 ease-in-out invisible opacity-0 group-hover:visible group-hover:opacity-100 shadow-ln rounded-b-3xl overflow-hidden w-[100%]">
+                                        <div class="grid grid-cols-5 gap-10 bg-white rounded-b-3xl py-8 px-20">
                                             {% for sublink in link.links %}
                                                 <a href="{{ sublink.url }}" title="{{ sublink.title }}"><p class="text-primary text-xl">{{ sublink.title }}</p></a>
                                             {% endfor %}
