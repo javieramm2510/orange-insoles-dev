@@ -3,7 +3,7 @@
 %}
 
 <div>
-    <div id="mobile-header"class="text-[#272727] bg-white shadow-sp pt-2 pb-4 mb-10 ds:hidden">
+    <div id="mobile-header"class="text-[#272727] bg-white shadow-sp pt-5 pb-4 mb-10 ds:hidden">
         <div class="mx-5">
             <div class="flex justify-between items-center">
                 <a href="#">
@@ -98,75 +98,6 @@
         </div>
     </div>
 </div>
-
-
-{% comment %} <script>
-    function myFunctionGrid(id) {
-        var x = document.getElementById(id);
-        if (x.classList.contains('invisible')) {
-            x.classList.remove('invisible');
-            x.classList.add('visible');
-            x.classList.remove('-left-[480px]');
-            x.classList.add('-left-0');
-        } else {
-            x.classList.remove('visible');
-            x.classList.add('invisible');
-            x.classList.remove('-left-0');
-            x.classList.add('-left-[480px]');
-        }
-    }
-    function myFunctionSearch(id) {
-        var x = document.getElementById(id);
-        const y = document.getElementById('ext_search');
-        if (x.classList.contains('invisible')) {
-            x.classList.remove('invisible');
-            x.classList.add('visible');
-            x.classList.remove('opacity-0');
-            x.classList.add('opacity-100');
-            y.classList.remove('invisible');
-            y.classList.add('visible');
-            y.classList.remove('opacity-0');
-            y.classList.add('opacity-100');
-        } else {
-            x.classList.remove('visible');
-            x.classList.add('invisible');
-            x.classList.remove('opacity-100');
-            x.classList.add('opacity-0');
-            y.classList.remove('visible');
-            y.classList.add('invisible');
-            y.classList.remove('opacity-100');
-            y.classList.add('opacity-0');
-        }
-    }  
-    function myFunctionMenu(id) {
-        var x = document.getElementById(id);
-        const y = document.getElementById('int_div');
-        const z = document.getElementById('ext_div');
-        if (x.classList.contains('invisible')) {
-            x.classList.remove('invisible');
-            x.classList.add('visible');
-            x.classList.remove('opacity-0');
-            x.classList.add('opacity-100');
-            y.classList.remove('-left-[480px]');
-            y.classList.add('-left-0');
-            z.classList.remove('invisible');
-            z.classList.add('visible');
-            z.classList.remove('opacity-0');
-            z.classList.add('opacity-100');
-        } else {
-            x.classList.remove('visible');
-            x.classList.add('invisible');
-            x.classList.remove('opacity-100');
-            x.classList.add('opacity-0');
-            y.classList.remove('-left-0');
-            y.classList.add('-left-[480px]');
-            z.classList.remove('visible');
-            z.classList.add('invisible');
-            z.classList.remove('opacity-100');
-            z.classList.add('opacity-0');
-        }
-    }
-</script> {% endcomment %}
 
 
 {% schema %}
