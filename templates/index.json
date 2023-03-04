@@ -142,6 +142,50 @@
     },
     "7f02c775-11d6-4e38-9794-f0f9a52d06bf": {
       "type": "swp-product-hero-header",
+      "blocks": {
+        "77e2d9ef-c3cc-48ff-a5d9-a61c1f60547b": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "",
+            "page": ""
+          }
+        },
+        "1c635375-d5dc-4b49-afc4-3a8154718ea0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "23519da2-1417-43d1-9874-823d1c7213cc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "ruler",
+            "content": "",
+            "page": ""
+          }
+        },
+        "8a1a133e-2fb1-459c-b2ba-a7853c0e71ab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "heart",
+            "content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "77e2d9ef-c3cc-48ff-a5d9-a61c1f60547b",
+        "1c635375-d5dc-4b49-afc4-3a8154718ea0",
+        "23519da2-1417-43d1-9874-823d1c7213cc",
+        "8a1a133e-2fb1-459c-b2ba-a7853c0e71ab"
+      ],
       "settings": {
         "product": "orange-full",
         "message": "Not sure what insole is right for you? Take the Insole Quiz!",
