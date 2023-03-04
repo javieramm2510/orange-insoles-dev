@@ -145,9 +145,8 @@
       "settings": {
         "product": "orange-full",
         "message": "Not sure what insole is right for you? Take the Insole Quiz!",
-        "stamp_url": "",
-        "quantity": false,
-        "stock": "Not available at this time. This product will be available soon. Please contact us if you would still like to place an order."
+        "button1": "Buy Now",
+        "button2": "Take The Insole Quiz"
       }
     },
     "image_banner": {
