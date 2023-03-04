@@ -140,6 +140,16 @@
         "sub": "Discover why Orange Insoles are the industry leading solution to foot comfort."
       }
     },
+    "7f02c775-11d6-4e38-9794-f0f9a52d06bf": {
+      "type": "swp-product-hero-header",
+      "settings": {
+        "product": "orange-full",
+        "message": "Not sure what insole is right for you? Take the Insole Quiz!",
+        "stamp_url": "",
+        "quantity": false,
+        "stock": "Not available at this time. This product will be available soon. Please contact us if you would still like to place an order."
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "disabled": true,
@@ -364,6 +374,7 @@
     "9c562bca-8246-4069-b9fe-c2802db7f32c",
     "bb3a2b42-7847-4cae-93af-54bb2f2cc6cc",
     "58a8093b-18b2-4cdf-9dd3-791a737e8666",
+    "7f02c775-11d6-4e38-9794-f0f9a52d06bf",
     "image_banner",
     "rich_text",
     "featured_collection",
