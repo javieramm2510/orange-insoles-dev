@@ -1233,6 +1233,10 @@ video {
   opacity: 0.8;
 }
 
+.opacity-\[13\] {
+  opacity: 13;
+}
+
 .outline {
   outline-style: solid;
 }
