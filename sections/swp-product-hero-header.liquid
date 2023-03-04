@@ -1,8 +1,8 @@
 {% liquid
   assign product = section.settings.product
   assign message = section.settings.message
-  assign button1 = product.settings.button1
-  assign button2 = product.settings.button2
+  assign button1 = section.settings.button1
+  assign button2 = section.settings.button2
   assign featured_image = current_variant.featured_image | default: product.featured_image 
   assign stamp = section.settings.stamp
   assign stamp_url = section.settings.stamp_url
