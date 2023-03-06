@@ -1,13 +1,8 @@
 {% liquid
-  assign product = section.settings.product
   assign message = section.settings.message
   assign button1 = section.settings.button1
   assign button2 = section.settings.button2
   assign featured_image = current_variant.featured_image | default: product.featured_image 
-  assign stamp = section.settings.stamp
-  assign stamp_url = section.settings.stamp_url
-  assign quant = section.settings.quantity
-  assign stock = section.settings.stock
 %}
 
 <div id="product" class="mb-10 mx-5 dm:max-w-screen-dm dm:mx-auto dm:px-10 ds:mx-9 dl:px-0">
@@ -127,11 +122,6 @@ const swiper = new Swiper('.swiper1', {
 {   
   "name": "Product Hero",
   "settings": [
-      {
-        "type": "product",
-        "id": "product",
-        "label": "Product"
-      },
       {
         "type": "text",
         "id": "message",
@@ -356,11 +346,6 @@ const swiper = new Swiper('.swiper1', {
           }
         ]
       }
-    ],
-    "presets": [
-        {
-        "name": "Product Hero"
-        }
     ]
 }
 {% endschema %}
