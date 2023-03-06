@@ -11,7 +11,7 @@
   <div class="flex flex-col gap-6 ds:flex-row ds:gap-8">
     <div class="ds:sticky ds:top-44 ds:h-max ds:pr-3 ds:w-1/2">
 
-      <div class="swiper swiper1 bg-white shadow-sp rounded-cl w-full mb-6">
+      <div class="swiper swiper1 bg-white rounded-xl w-full mb-6">
         <div class="swiper-wrapper items-center">
 
           {% for image in product.images %}
@@ -37,7 +37,7 @@
         <div class="swiper-wrapper">
         {% for image in product.images %}
           <div class="swiper-slide flex items-center bg-white rounded-cl" >
-            <img class="shadow-sp rounded-cl object-cover mx-auto h-24" src="{{ image | image_url: height: 100 }}" title="{{ product.title | escape }}" alt="{{ image.alt | escape }}">
+            <img class="rounded-2xl object-cover mx-auto h-24" src="{{ image | image_url: height: 100 }}" title="{{ product.title | escape }}" alt="{{ image.alt | escape }}">
           </div>
         {% endfor %}
         </div>
