@@ -2,7 +2,54 @@
   "sections": {
     "main": {
       "type": "swp-product-hero-header",
+      "blocks": {
+        "d60c4f04-7941-404b-a65c-69f2275736e4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "",
+            "page": ""
+          }
+        },
+        "d5b9318a-77c4-48fc-bf78-960cb6b459d6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "3077ffb8-84ac-4c59-98ec-0c7db4f447a1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "55281f86-dc6f-40f6-ba94-c23c41cb194a": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "d60c4f04-7941-404b-a65c-69f2275736e4",
+        "d5b9318a-77c4-48fc-bf78-960cb6b459d6",
+        "3077ffb8-84ac-4c59-98ec-0c7db4f447a1",
+        "55281f86-dc6f-40f6-ba94-c23c41cb194a"
+      ],
       "settings": {
+        "message": "Not sure what insole is right for you? Take the Insole Quiz!",
+        "button1": "Buy Now",
+        "button2": "Take The Insole Quiz"
       }
     }
   },
