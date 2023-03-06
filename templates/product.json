@@ -15,8 +15,8 @@
         "d5b9318a-77c4-48fc-bf78-960cb6b459d6": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
+            "heading": "Shipping & Returns",
+            "icon": "truck",
             "content": "",
             "page": ""
           }
@@ -24,8 +24,8 @@
         "3077ffb8-84ac-4c59-98ec-0c7db4f447a1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
+            "heading": "Dimensions",
+            "icon": "ruler",
             "content": "",
             "page": ""
           }
@@ -33,8 +33,8 @@
         "55281f86-dc6f-40f6-ba94-c23c41cb194a": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
+            "heading": "Care Instructions",
+            "icon": "heart",
             "content": "",
             "page": ""
           }
