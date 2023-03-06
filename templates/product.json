@@ -1,12 +1,12 @@
 {
-    "sections": {
-      "main": {
-        "type": "swp-product-hero-header.liquid",
-        "settings": {
-        }
+  "sections": {
+    "main": {
+      "type": "swp-product-hero-header",
+      "settings": {
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
