@@ -37,7 +37,7 @@
         <div class="swiper-wrapper">
         {% for image in product.images %}
           <div class="swiper-slide flex items-center bg-white rounded-cl" >
-            <img class="rounded-2xl object-cover mx-auto h-24" src="{{ image | image_url: height: 100 }}" title="{{ product.title | escape }}" alt="{{ image.alt | escape }}">
+            <img class="rounded-2xl object-cover border-[1px] border-[#E0E0E0] mx-auto h-24" src="{{ image | image_url: height: 100 }}" title="{{ product.title | escape }}" alt="{{ image.alt | escape }}">
           </div>
         {% endfor %}
         </div>
