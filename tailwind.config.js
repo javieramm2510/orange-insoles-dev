@@ -17,12 +17,19 @@ module.exports = {
       'mm': '480px',
       'ml': '568px',
       'ts': '768px',
+      'md': '768px',
       'tl': '868px',
       'ds': '1024px',
+      'lg': '1024px',
       'dm': '1200px',
+      'xl': '1200px',
       'dl': '1440px',
     },
-    extend: {},
+    extend: {
+      colors: {
+        clifford: '#da373d',
+      }
+    },
   },
   plugins: [],
 }
