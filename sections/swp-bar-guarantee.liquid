@@ -1,0 +1,51 @@
+<style>
+  .stroke-orange {
+    -webkit-text-stroke: 0.5px #E68A3F;
+  }
+  .bar-animation {
+    animation: bar 10s linear infinite;
+  }
+
+  @keyframes bar {
+    from {transform: translate(0);}
+    to {transform: translate(-50%);}
+  }
+</style>
+
+<div class="md:mx-auto flex text-[50px] flex-nowrap font-black w-max bar-animation gap-7 my-20 md:my-40" style="min-width: 100vw">
+  <h3 class="text-[#E68A3F] w-1/2">{{ section.settings.bar_text }}</h3>
+  <h3 class="text-white stroke-orange w-1/2">{{ section.settings.bar_text }}</h3>
+  <h3 class="text-[#E68A3F] w-1/2">{{ section.settings.bar_text }}</h3>
+  <h3 class="text-white stroke-orange w-1/2">{{ section.settings.bar_text }}</h3>
+  <h3 class="text-[#E68A3F] w-1/2">{{ section.settings.bar_text }}</h3>
+  <h3 class="text-white stroke-orange w-1/2">{{ section.settings.bar_text }}</h3>
+  <h3 class="text-[#E68A3F] w-1/2">{{ section.settings.bar_text }}</h3>
+  <h3 class="text-white stroke-orange w-1/2">{{ section.settings.bar_text }}</h3>
+  <h3 class="text-[#E68A3F] w-1/2">{{ section.settings.bar_text }}</h3>
+  <h3 class="text-white stroke-orange w-1/2">{{ section.settings.bar_text }}</h3>
+</div>
+
+{% schema %}
+  {
+    "name": "Bar Guarantee",
+    "class": "overflow-x-hidden",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bar_text",
+        "label": "Bar Text"
+      }
+    ],
+    "presets": [
+        {
+        "name": "Bar Guarantee"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

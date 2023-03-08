@@ -2,14 +2,30 @@
     assign nav_menu = linklists[section.settings.nav_menu.handle]
 %}
 
+<style>
+  @media screen and (min-width: 1025px) {
+    #mobile-header-container {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    #mobile-header-container {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+    }
+  }
+</style>
+
 <div>
-    <div id="mobile-header"class="text-[#272727] bg-white shadow-sp pt-5 pb-4 mb-10 ds:hidden">
+    <div id="mobile-header"class="text-[#272727] bg-white shadow-sp pt-5 pb-4 mb-10 lg:hidden ">
         <div class="mx-5">
             <div class="flex justify-between items-center">
-                <a href="#">
+                <a onclick="openMobileHeader()" href="#">
                     {% render 'icons', icon: 'burger' %}
                 </a>
-                <a href="#" title="Orange Insoles">
+                <a href="/" title="Orange Insoles">
                     {% render 'icons', icon: 'logo' %}
                 </a>
                 <a href="#">
@@ -19,7 +35,7 @@
         </div>
     </div>
     
-    <div class="hidden z-10 text-[#272727] bg-white shadow-sp mb-10 ds:block">
+    <div class="hidden z-10 text-[#272727] bg-white shadow-sp mb-10 lg:block ">
         <div class="flex justify-between items-center gap-[20px] relative divide-x-2 divide-[#BBBBBB] py-[36px] ds:mx-9 dm:mx-auto dm:max-w-screen-dm dm:px-10 dl:px-4">
             <div class="flex justify-between items-center gap-[40px]">
                 <div class="m-auto dm:max-w-screen-dm">
@@ -97,7 +113,60 @@
             </div>
         </div>
     </div>
+    <div id="mobile-header-container" class="w-screen h-screen hidden z-10 fixed top-0 left-0 bg-[#E68A3F]">
+          <div class="flex justify-between items-start w-full h-full gap-[20px] relative ds:mx-9 dm:mx-auto dm:max-w-screen-dm dm:px-10 dl:px-4">
+              <div class="flex justify-between flex-col gap-[40px] w-1/2 p-[36px]">
+                <a href="/" title="Orange Insoles">
+                      {% render 'icons', icon: 'logo_orange' %}
+                  </a>
+                  {% if nav_menu != blank %}
+                      <ul class="flex-col flex justify-evenly gap-[20px]">
+                          {% for link in nav_menu.links %}
+                              <li>
+                              <div class="group peer">
+                                  <a class="flex items-center gap-2 text-[32px] leading-[30px] font-bold text-white" href="{{ link.url }}">
+                                      {{ link.title }}
+                                  </a>
+                              </div>
+                              </li>
+                          {% endfor %}
+                      </ul>
+                  {% endif %}
+              </div>
+              <div class="flex justify-start items-end flex-col w-1/2 h-full border-0 bg-[#f1f1f1] p-[36px] gap-[50px]">
+                <a onclick="openMobileHeader()" href="#" style="height: 30px; width: 30px; border: 2px solid black; border-radius: 50%; padding:8px;">
+                    {% render 'icon-close' %}
+                </a>
+                <div class="">
+                  <span>Shop the Orange Insole Lineup</span>
+                  <div class="flex justify-between w-full gap-5 flex-wrap mt-5">
+                    {% for block in section.blocks %}
+                      <a href="{{ block.settings.product.url }}">
+                        <div class="flex items-center bg-white p-4" style="height: 100px; border-radius:10px;">
+                          <img src="{{ block.settings.image | img_url: "80x" }}">
+                        </div>
+                        <span class=" text-[#E68A3F] text-base">{{ block.settings.title }}</span>
+                      </a>
+                    {% endfor %}
+                  </div>
+                </div>
+                
+              </div>
+          </div>
+      </div>
 </div>
+
+<script>
+  function openMobileHeader () {
+    const mobile_header_container = document.getElementById('mobile-header-container')
+    console.log(mobile_header_container)
+    if(mobile_header_container.classList.contains('hidden')) {
+      mobile_header_container.classList.remove('hidden')
+    } else {
+      mobile_header_container.classList.add('hidden')
+    }
+  }
+</script>
 
 
 {% schema %}
@@ -109,6 +178,34 @@
             "type": "link_list",
             "id": "nav_menu",
             "label": "Navigation Menu"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Product",
+            "type": "product",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "Product"
+                }
+            ]
         }
     ],
     "presets": [

@@ -1,0 +1,27 @@
+<div class="w-full md:max-w-screen-xl md:mx-auto">
+  <img src="{{ section.settings.image | img_url: '' }}">
+</div>
+
+{% schema %}
+  {
+    "name": "Image",
+    "settings": [
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+        {
+        "name": "Image"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

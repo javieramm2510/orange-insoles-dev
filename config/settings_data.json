@@ -139,8 +139,42 @@
       },
       "header-navigation": {
         "type": "header-navigation",
+        "blocks": {
+          "7705e0ab-2c55-4397-9490-848634299672": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/orange_full-web_3.png",
+              "title": "Orange Full",
+              "description": "",
+              "product": "orange-full"
+            }
+          },
+          "5e7361dd-5662-4432-9c3a-fd4c4d0da8fe": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/orange_3quarter-web_1.png",
+              "title": "Orange 3\/4",
+              "description": "",
+              "product": "orange-3-4"
+            }
+          },
+          "ced61743-1762-49ba-b17d-50eeb9c7bd19": {
+            "type": "product",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Orange_Light_Amazon_test_large_3.png",
+              "title": "Orange Light",
+              "description": "",
+              "product": "orange-light"
+            }
+          }
+        },
+        "block_order": [
+          "7705e0ab-2c55-4397-9490-848634299672",
+          "5e7361dd-5662-4432-9c3a-fd4c4d0da8fe",
+          "ced61743-1762-49ba-b17d-50eeb9c7bd19"
+        ],
         "settings": {
-          "nav_menu": "orange-nav-menu"
+          "nav_menu": "header-menu"
         }
       }
     },

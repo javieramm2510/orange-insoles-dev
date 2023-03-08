@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/static/css/main.react-shop.css",
+    "main.js": "/static/js/main.react-shop.js",
+    "index.html": "/index.html",
+    "main.react-shop.js.map": "/static/js/main.react-shop.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.react-shop.css",
+    "static/js/main.react-shop.js"
+  ]
+}

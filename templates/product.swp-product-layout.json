@@ -1,0 +1,101 @@
+{
+  "sections": {
+    "main": {
+      "type": "swp-product-hero-header",
+      "blocks": {
+        "d60c4f04-7941-404b-a65c-69f2275736e4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "",
+            "page": ""
+          }
+        },
+        "d5b9318a-77c4-48fc-bf78-960cb6b459d6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "3077ffb8-84ac-4c59-98ec-0c7db4f447a1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "ruler",
+            "content": "",
+            "page": ""
+          }
+        },
+        "55281f86-dc6f-40f6-ba94-c23c41cb194a": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "heart",
+            "content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "d60c4f04-7941-404b-a65c-69f2275736e4",
+        "d5b9318a-77c4-48fc-bf78-960cb6b459d6",
+        "3077ffb8-84ac-4c59-98ec-0c7db4f447a1",
+        "55281f86-dc6f-40f6-ba94-c23c41cb194a"
+      ],
+      "settings": {
+        "message": "<p><a href=\"\/pages\/insole-selector\" target=\"_blank\" title=\"Insole Selector\">Not sure what insole is right for you? Take the Insole Quiz!<\/a><\/p>",
+        "button1": "Buy Now",
+        "button2": "Take The Insole Quiz"
+      }
+    },
+    "08ed03cb-2523-415c-ba96-15076bd4b2f8": {
+      "type": "swp-imae-product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image.png"
+      }
+    },
+    "3c211575-22e3-4d1b-b855-ed08677e4df9": {
+      "type": "swp-what-makes-tech-better",
+      "settings": {
+        "text_align": "left",
+        "title": "What Makes Our Tech Better",
+        "sub": "Discover why Orange Insoles are the industry leading solution to foot comfort.",
+        "image": "shopify:\/\/shop_images\/Group_117.png"
+      }
+    },
+    "cab6e2ad-5f98-450e-b660-124b14fbf99d": {
+      "type": "swp-bar-guarantee",
+      "settings": {
+        "bar_text": "THE ORANGE GUARANTEE"
+      }
+    },
+    "442a6ae4-d38e-4c06-9557-f4720d9d8985": {
+      "type": "swp-orange-guarantee",
+      "settings": {
+        "orange_guarantee_header": "The Orange Guarantee",
+        "orange_guarantee_text": "<p>We are confident that you will feel better and do more with Orange Insoles. We proudly offer a 60 day guarantee and free shipping on returns. If you are unsatisfied, please return the insoles to your vendor with your sales receipt. If you purchased them through this website contact us directly: owen@orangeinsoles.net or call 517-349-3790<\/p>",
+        "linktext": "Shop Insoles",
+        "linkurl": "shopify:\/\/collections\/insoles",
+        "heading_size": "h1",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "border_radius": 16
+      }
+    }
+  },
+  "order": [
+    "main",
+    "08ed03cb-2523-415c-ba96-15076bd4b2f8",
+    "3c211575-22e3-4d1b-b855-ed08677e4df9",
+    "cab6e2ad-5f98-450e-b660-124b14fbf99d",
+    "442a6ae4-d38e-4c06-9557-f4720d9d8985"
+  ]
+}

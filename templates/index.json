@@ -8,7 +8,6 @@
         "description": "Orange Insoles, we can help you reduce pain and increase performance.",
         "button": "Shop Insoles",
         "button_url": "",
-        "logo": "shopify:\/\/shop_images\/Screenshot_2022-11-21_at_7.26_1.png",
         "background": "shopify:\/\/shop_images\/Hero-Orange-Insole.png"
       }
     },
@@ -99,7 +98,7 @@
         "b8ea76af-2822-4616-a72b-5672384f132d": {
           "type": "member",
           "settings": {
-            "image": "shopify:\/\/shop_images\/owen.png",
+            "image": "shopify:\/\/shop_images\/Rectangle_74.png",
             "name": "Owen",
             "occupation": "Business Dev"
           }
@@ -107,7 +106,7 @@
         "b5e72207-caa0-4a22-beba-9c51c19d725b": {
           "type": "member",
           "settings": {
-            "image": "shopify:\/\/shop_images\/brad.png",
+            "image": "shopify:\/\/shop_images\/Rectangle_76.png",
             "name": "Brad",
             "occupation": "Shipping Manager"
           }
@@ -115,7 +114,7 @@
         "25c28f40-bdad-4231-99ff-a54776b8c9b2": {
           "type": "member",
           "settings": {
-            "image": "shopify:\/\/shop_images\/marsha.png",
+            "image": "shopify:\/\/shop_images\/Rectangle_78.png",
             "name": "Marsha",
             "occupation": "Operations & Founder"
           }
@@ -123,7 +122,7 @@
         "74daa269-83e0-40c9-ae3f-83a57a32e883": {
           "type": "member",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tom.png",
+            "image": "shopify:\/\/shop_images\/Rectangle_80.png",
             "name": "Tom",
             "occupation": "Product Dev & Founder"
           }
