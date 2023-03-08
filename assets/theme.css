@@ -817,6 +817,11 @@ video {
   width: 100vw;
 }
 
+.min-w-max {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
 .max-w-\[480px\] {
   max-width: 480px;
 }
@@ -1644,6 +1649,10 @@ video {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
   }
 
   .lg\:gap-8 {

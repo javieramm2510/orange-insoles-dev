@@ -47,8 +47,8 @@
     <div class="ds:w-1/2">
       <div class="flex justify-between items-center mb-[16px]">
         <h1 class="font-bold text-[30px] ts:text-[45px] lg:text-[60px]">{{ product.title }}</h1>
-        <h2 class="flex items-end flex-wrap font-medium text-[15px] text-[#606060] ts:text-[22px] lg:text-[30px]">
-        <span class="shrink-0 mr-4 lg:text-lg">Starting at:</span><span class="shrink-0">{{ product.price | money }}</span></h2>
+        <div class="flex items-end flex-wrap font-medium text-[15px] text-[#606060] min-w-max ts:text-[22px] lg:flex-col lg:text-[30px]">
+        <span class="shrink-0 mr-4 lg:text-lg">Starting at:</span><h2 class="shrink-0">{{ product.price | money }}</h2></div>
       </div>
       <div class="text-[20px] text-[#3A3A3A] mb-[24px]">{{ product.description }}</div>
       <div class="text-[18px] bg-[#fcefe6] rounded-3xl mb-[50px] px-[16px] py-[20px]">{{ message }}</div>
