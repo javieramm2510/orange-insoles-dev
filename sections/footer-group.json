@@ -4,21 +4,6 @@
   "sections": {
     "1678224187a979ab14": {
       "type": "apps",
-      "blocks": {
-        "ef8b0ef0-ef39-4723-b6db-49c5ce0e289e": {
-          "type": "shopify:\/\/apps\/shop-quiz-product-recommender\/blocks\/inline-quiz\/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
-          "disabled": true,
-          "settings": {
-            "quiz_id": "5XHr6M",
-            "quiz_height": 600,
-            "quiz_autoscroll": true,
-            "quiz_fixed_height": false
-          }
-        }
-      },
-      "block_order": [
-        "ef8b0ef0-ef39-4723-b6db-49c5ce0e289e"
-      ],
       "settings": {
         "include_margins": true
       }
