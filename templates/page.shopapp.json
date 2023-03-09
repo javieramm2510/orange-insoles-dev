@@ -4,9 +4,16 @@
       "type": "shopapp",
       "settings": {
       }
+    },
+    "9d64b54e-0a13-48c2-ae3d-698318487e68": {
+      "type": "swp-imae-product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image.png"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "9d64b54e-0a13-48c2-ae3d-698318487e68"
   ]
 }
