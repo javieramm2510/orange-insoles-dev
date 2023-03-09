@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
@@ -221,17 +220,8 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
-
-
-    <!-- React ================================================== -->
-    {% comment %} Shop app {% endcomment %}
-    {% if page.handle == "shop" %} 
-      <script defer type="module" src="{{ "/assets/main.react-shop.js" }}"></script>
-      <style src="{{ "/assets/main.react-shop.css" }}"></style>
-    {% endif %}
-
-
-    <!-- React ================================================== -->
+    {% comment %} Tailwind CSS file {% endcomment %}
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
 
     {% comment %} Swiper Slider {% endcomment %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
